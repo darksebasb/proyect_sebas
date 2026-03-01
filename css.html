@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">  <!-- Faltaba la etiqueta <html> -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Usar <nav> para navegación en lugar de <div> -->
+    <nav class="tab-container">
+        <button id="btnHtml" class="boton-redirect" onClick="actionRedirect('index.html');">
+            Ir a Página HTML
+        </button>
+        <button id="btnCss" class="boton-redirect" onClick="actionRedirect('css.html');">
+            Ir a Página CSS
+        </button>
+        <button id="btnJavaScript" class="boton-redirect" onClick="actionRedirect('javascript.html');">
+            Ir a Página JavaScript
+        </button>
+    </nav>
+
+    <main id="CSS" class="tabcontent">  <!-- <main> para contenido principal -->
+        <img src="https://blog.walthercuro.com/wp-content/uploads/2024/10/image-40.png" 
+             style="display: block; margin: 0 auto;" 
+             alt="Logo CSS">  <!-- Siempre agrega alt a las imágenes -->
+        
+        <h2>¿Qué es CSS?</h2>  <!-- <h2> en minúsculas -->
+        <p>
+            Es un lenguaje de diseño usado para darle la apariencia visual a una página web y controlar los aspectos
+            como: color, tipografía, márgenes y animaciones.
+        </p>
+
+        <h3>¿Para qué sirve CSS?</h3>
+        <ul>
+            <li>Separar la estructura del documento HTML.</li>
+            <li>Permite realizar cambios en la apariencia de una web sin afectar de manera dramática a su contenido.</li>
+            <li>El rendimiento de la página web es más ágil y eficaz.</li>
+        </ul>
+
+        <h3>¿En qué casos se usa CSS?</h3>
+        <p>Se usa CSS en prácticamente cualquier proyecto web para transformar el código HTML sin estilo en una interfaz atractiva, organizada y funcional.</p>
+        <ul>
+            <li><strong>Diseño y Maquetación:</strong> Define la estructura de la página como: diseños de columnas y posicionamiento de elementos.</li>
+            <li><strong>Estilo de texto y fuente:</strong> Personalización de colores, tamaños de letras y espacio de párrafos y encabezados.</li>
+            <li><strong>Adaptabilidad:</strong> Crear sitios web que se adapten al tipo de dispositivo donde se esté haciendo la apertura de estas páginas o sitios web (móvil, tablet, computador, etc.).</li>
+            <li><strong>Animaciones y Transiciones:</strong> Crear efectos visuales que contengan transiciones o animaciones que mejoren la interacción con los usuarios.</li>
+            <li><strong>Uniformidad en el sitio:</strong> Aplicando los estilos de manera uniforme en múltiples páginas desde un mismo archivo CSS.</li>
+            <li><strong>Estilos de Formulario y Multimedia:</strong> Mejora en la apariencia de botones y ajuste en el estilo de imágenes y videos.</li>
+        </ul>
+    </main>
+    
+    <script src="scrip.js"></script>
+</body>
+</html>

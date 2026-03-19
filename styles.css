@@ -91,6 +91,155 @@ main.tabcontent img {
   display: block;
   box-shadow: var(--sombra-suave);
 }
+/* ============================================
+   TABLA ESTILIZADA
+   ============================================ */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2.5rem 0;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  font-size: 0.95rem;
+}
+
+.table thead {
+  background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
+}
+
+.table th {
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  padding: 16px;
+  text-align: left;
+}
+
+.table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #475569;
+}
+
+.table tbody tr:hover {
+  background-color: #f8fafc;
+  transition: all 0.2s ease;
+}
+
+.table td:first-child {
+  font-family: 'Courier New', monospace;
+  color: var(--color-primario);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.table td:last-child {
+  font-family: 'Courier New', monospace;
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+/* ============================================
+   ACORDEÓN - BOTONES DESPLEGABLES
+   ============================================ */
+
+.acordeon-item {
+    margin-bottom: 1rem;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.acordeon-boton {
+    width: 100%;
+    background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
+    color: white;
+    border: none;
+    padding: 1.2rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.acordeon-boton:hover {
+    background: linear-gradient(135deg, #5558e0, #7c4fe0);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+}
+
+.acordeon-boton.activo {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+}
+
+.flecha {
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+}
+
+.acordeon-boton.activo .flecha {
+    transform: rotate(180deg);
+}
+
+.acordeon-contenido {
+    max-height: 0;
+    overflow: hidden;
+    background: #f8fafc;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.acordeon-contenido.activo {
+    max-height: 500px;
+    padding: 1.5rem;
+}
+
+.acordeon-contenido ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.acordeon-contenido li {
+    background: white;
+    padding: 0.9rem 1.2rem;
+    margin-bottom: 0.6rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--color-primario);
+    color: #475569;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+.acordeon-contenido li:hover {
+    transform: translateX(5px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    background: #f1f5f9;
+}
+
+.acordeon-contenido li:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive para acordeón */
+@media (max-width: 600px) {
+    .acordeon-boton {
+        font-size: 1rem;
+        padding: 1rem 1.2rem;
+    }
+    
+    .acordeon-contenido.activo {
+        padding: 1rem;
+    }
+}
+
 
 /* ============================================
    TIPOGRAFÍA MODERNA
@@ -147,6 +296,7 @@ li strong {
   font-weight: 600;
 }
 
+
 /* ============================================
    RESPONSIVE (MÓVIL)
    ============================================ */
@@ -168,4 +318,28 @@ li strong {
   h2 {
     font-size: 1.8rem;
   }
+}
+
+/* ============================================
+   FOOTER - DERECHOS RESERVADOS
+   ============================================ */
+footer {
+  background: rgba(30, 41, 59, 0.95);  /* Color oscuro */
+  color: #94a3b8;  /* Gris claro */
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0;
+  color: #94a3b8;
+}
+
+/* Símbolo de copyright más grande */
+footer p::before {
+  content: "©";
+  margin-right: 5px;
+  font-size: 1.1rem;
 }

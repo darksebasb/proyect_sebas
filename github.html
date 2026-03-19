@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name = "description" content="Podremos evidenciar por medio de esta pagina web los diferentes conceptos basicos para poder empezar a crear una pagina web desde cero">
+    <title>GitHub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="tab-container">
+        <button id="btnHtml" class="boton-redirect" onClick="actionRedirect('index.html');">
+            HTML
+        </button>
+        <button id="btnCss" class="boton-redirect" onClick="actionRedirect('css.html');">
+            CSS
+        </button>
+        <button id="btnJavaScript" class="boton-redirect" onClick="actionRedirect('javascript.html');">
+            JavaScript
+        </button>
+        <button id="btnGit" class="boton-redirect" onClick="actionRedirect('git.html');">
+            Git
+        </button>
+        <button id="btnGitHub" class="boton-redirect" onClick="actionRedirect('github.html');">
+            GitHub
+        </button>
+        <button id="btnGitLab" class="boton-redirect" onClick="actionRedirect('gitlab.html');">
+            GitLab
+        </button>
+        <button id="btnalojamiento" class="boton-redirect" onClick="actionRedirect('alojamientoWeb.html')">
+            Alojamiento Web
+        </button>
+    </nav>
+    <main  id="GITHUB" class="tabcontent">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT90bGPn6OCVIW4XhXhK1wjd7oFczDgebxKgA&s" 
+            alt="Logo github">
+        <h2>¿Que es GitHub?</h2>
+        <p>GitHub es una plataforma web que permite almacenar, gestionar y compartir código fuente de proyectos de software.</p>
+
+        <h3>¿Para que sirve GitHub?</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Funcion</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Almacenar código</td>
+                    <td>Guardar proyectos de forma segura en la nube</td>
+                </tr>
+                <tr>
+                    <td>Control de versiones</td>
+                    <td>Ver historial de cambios y volver a versiones anteriores</td>
+                </tr>
+                <tr>
+                    <td>Trabajo colaborativo</td>
+                    <td>Varios programadores trabajan en el mismo proyecto sin conflictos</td>
+                </tr>
+                <tr>
+                    <td>Seguimiento de cambios</td>
+                    <td>Saber quién modificó qué y cuándo</td>
+                </tr>
+                <tr>
+                    <td>Revisión de código</td>
+                    <td>Revisar y aprobar cambios antes de integrarlos</td>
+                </tr>
+                <tr>
+                    <td>Gestión de proyectos</td>
+                    <td>Organizar tareas, bugs y mejoras</td>
+                </tr>
+                <tr>
+                    <td>Documentación</td>
+                    <td>Crear wikis y páginas explicativas</td>
+                </tr>
+                <tr>
+                    <td>Automatización</td>
+                    <td>Ejecutar pruebas y despliegues automáticos</td>
+                </tr>
+                <tr>
+                    <td>Portafolio profesional</td>
+                    <td>Mostrar tus proyectos a empleadores</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>¿En que casos se usa GitHub?</h3>
+        <!-- ACORDEÓN 1: Desarrollo Personal-->
+        <div class="acordeon-item">
+            <button class="acordeon-boton" onclick="toggleAcordeon('desarrolloPersonal')">
+                1. Desarrollo Personal
+                <span class="flecha">▼</span>
+            </button>
+            <div id="desarrolloPersonal" class="acordeon-contenido">
+                <ul>
+                    <li>Aprendiendo a programar guardando ejercicios y proyectos de practica</li>
+                    <li>Creando un proyecto propio en el que se desarrole una app o pagina web personal</li>
+                    <li>Haciendo copia de seguridad el cual permitira que el codigo este seguro en caso de presentar fallas en tu computadora</li>
+                    <li>Llevando tu código a cualquier lado</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ACORDEÓN 2: Trabajo en Equipo -->
+        <div class="acordeon-item">
+            <button class="acordeon-boton" onclick="toggleAcordeon('trabajo')">
+                2. Trabajo en Equipo
+                <span class="flecha">▼</span>
+            </button>
+            <div id="trabajo" class="acordeon-contenido">
+                <ul>
+                    <li>Trabajo entre compañeros sin la mezcla de proyectos</li>
+                    <li>Delegacion de funciones el cual uno programa, otro revisa y aprueba</li>
+                    <li>Documentación compartida en donde todos logran ver las mismas versiones actualizadas en tiempo real</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ACORDEÓN 3:  Proyectos de Código Abierto  -->
+        <div class="acordeon-item">
+            <button class="acordeon-boton" onclick="toggleAcordeon('proyectos')">
+                3. Proyectos de Código Abierto (Open Source)
+                <span class="flecha">▼</span>
+            </button>
+            <div id="proyectos" class="acordeon-contenido">
+                <ul>
+                    <li>Publicar tu proyecto gratis de tal manera que cualquiera puede usar o mejorar tu codigo</li>
+                    <li>Contribuir a proyectos existentes</li>
+                    <li>Aprender de otros</li>
+                    <li>Construir reputación</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ACORDEÓN 4:  Empresas y Startups -->
+        <div class="acordeon-item">
+            <button class="acordeon-boton" onclick="toggleAcordeon('empresas')">
+                4. Empresas y Startups
+                <span class="flecha">▼</span>
+            </button>
+            <div id="empresas" class="acordeon-contenido">
+                <ul>
+                    <li>Gestión de código privado</li>
+                    <li>Integración con otras herramientas</li>
+                    <li>Automatización de despliegues</li>
+                    <li>Control de accesos en donde decides quien puede ver o modificar cada parte</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ACORDEÓN 5: Educación y Mentoría-->
+        <div class="acordeon-item">
+            <button class="acordeon-boton" onclick="toggleAcordeon('educacion')">
+                5. Educación y Mentoría
+                <span class="flecha">▼</span>
+            </button>
+            <div id="educacion" class="acordeon-contenido">
+                <ul>
+                    <li>Profesores comparten ejemplos</li>
+                    <li>Revisión de tareas</li>
+                    <li>Proyectos grupales o colaborativos</li>
+                    <li>Tutoriales y cursos</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <!-- FOOTER - Derechos reservados -->
+    <footer>
+        <p>2026 Yosef. Todos los derechos reservados.</p>
+    </footer>
+    <script src="scrip.js"></script>
+<body>
+<html>

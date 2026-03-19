@@ -9,20 +9,32 @@
 <body>
     <nav class="tab-container">
         <button id="btnHtml" class="boton-redirect" onClick="actionRedirect('index.html');">
-            Ir a Página HTML
+            HTML
         </button>
         <button id="btnCss" class="boton-redirect" onClick="actionRedirect('css.html');">
-            Ir a Página CSS
+            CSS
         </button>
         <button id="btnJavaScript" class="boton-redirect" onClick="actionRedirect('javascript.html');">
-            Ir a Página JavaScript
+            JavaScript
+        </button>
+        <button id="btnGit" class="boton-redirect" onClick="actionRedirect('git.html');">
+            Git
+        </button>
+        <button id="btnGitHub" class="boton-redirect" onClick="actionRedirect('github.html');">
+            GitHub
+        </button>
+        <button id="btnGitLab" class="boton-redirect" onClick="actionRedirect('gitlab.html');">
+            GitLab
+        </button>
+        <button id="btnalojamiento" class="boton-redirect" onClick="actionRedirect('alojamientoWeb.html')">
+            Alojamiento Web
         </button>
     </nav>
 
     <main id="JavaScript" class="tabcontent">
         <img src="https://smilecomunicacion.com/wp-contenido/uploads/2025/03/manipular-dom-javascript.png.webp" 
              alt="Logo JavaScript">
-        
+
         <h2>¿Qué es JavaScript?</h2>
         <p>
             Es un lenguaje de programación usado por desarrolladores para hacer que las páginas web 
@@ -75,8 +87,294 @@
                 utilizando motores como Phaser o bibliotecas como Three.js.
             </li>
         </ul>
+        <h3>CONCEPTOS Y SINTAXIS BÁSICOS DE JAVASCRIPT</h3>
+        <p>
+            Nota importante: En JavaScript no existen "etiquetas" como en HTML. Se trabaja con:</p>
+        <ul>
+            <li>Palabras clave (const, function, if, etc.)</li>
+            <li>Métodos (map(), filter(), fetch(), etc.)</li>
+            <li>Objetos globales (document, window, console, etc.)</li>
+            <li>Sintaxis ES6+ (flechas, templates, destructuring, etc.)</li>
+        </ul>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Elemento</th>
+                    <th>Descripción</th>
+                    <th>Ejemplo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>alert()</td>
+                    <td>Muestra un mensaje emergente</td>
+                    <td>alert("Hola Mundo");</td>
+                </tr>
+                <tr>
+                    <td>break</td>
+                    <td>Sale de un bucle o switch</td>
+                    <td>while(true) { break; }</td>
+                </tr>
+                <tr>
+                    <td>const</td>
+                    <td>Declara una constante</td>
+                    <td>const PI = 3.14159;</td>
+                </tr>
+                <tr>
+                    <td>continue</td>
+                    <td>Salta a la siguiente iteración</td>
+                    <td>for(let i=0; i&lt;10; i++) { if(i===5) continue; }</td>
+                </tr>
+                <tr>
+                    <td>do...while</td>
+                    <td>Bucle que ejecuta al menos una vez</td>
+                    <td>do { console.log("x"); } while(false);</td>
+                </tr>
+                <tr>
+                    <td>document</td>
+                    <td>Objeto del DOM (página HTML)</td>
+                    <td>document.getElementById("miId");</td>
+                </tr>
+                <tr>
+                    <td>else</td>
+                    <td>Condición alternativa</td>
+                    <td>if(x &gt; 5) { } else { }</td>
+                </tr>
+                <tr>
+                    <td>false</td>
+                    <td>Valor booleano falso</td>
+                    <td>let activo = false;</td>
+                </tr>
+                <tr>
+                    <td>for</td>
+                    <td>Bucle con contador</td>
+                    <td>for(let i=0; i&lt;5; i++) { console.log(i); }</td>
+                </tr>
+                <tr>
+                    <td>function</td>
+                    <td>Declara una función</td>
+                    <td>function saludar() { return "Hola"; }</td>
+                </tr>
+                <tr>
+                    <td>if</td>
+                    <td>Condicional</td>
+                    <td>if(edad &gt;= 18) { console.log("Mayor"); }</td>
+                </tr>
+                <tr>
+                    <td>let</td>
+                    <td>Declara una variable (bloque)</td>
+                    <td>let nombre = "Ana";</td>
+                </tr>
+                <tr>
+                    <td>null</td>
+                    <td>Valor nulo intencional</td>
+                    <td>let datos = null;</td>
+                </tr>
+                <tr>
+                    <td>prompt()</td>
+                    <td>Solicita entrada al usuario</td>
+                    <td>let nombre = prompt("Tu nombre:");</td>
+                </tr>
+                <tr>
+                    <td>return</td>
+                    <td>Devuelve un valor de función</td>
+                    <td>function suma(a,b) { return a+b; }</td>
+                </tr>
+                <tr>
+                    <td>switch</td>
+                    <td>Selección múltiple</td>
+                    <td>switch(dia) { case 1: break; }</td>
+                </tr>
+                <tr>
+                    <td>true</td>
+                    <td>Valor booleano verdadero</td>
+                    <td>let activo = true;</td>
+                </tr>
+                <tr>
+                    <td>undefined</td>
+                    <td>Valor no definido</td>
+                    <td>let x; console.log(x); // undefined</td>
+                </tr>
+                <tr>
+                    <td>var</td>
+                    <td>Declara una variable (función)</td>
+                    <td>var edad = 25;</td>
+                </tr>
+                <tr>
+                    <td>while</td>
+                    <td>Bucle condicional</td>
+                    <td>while(i &lt; 10) { i++; }</td>
+                </tr>
+                <tr>
+                    <td>window</td>
+                    <td>Objeto global del navegador</td>
+                    <td>window.location.href = "https://google.com";</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3> ELEMENTOS MÁS UTILIZADOS ACTUALMENTE (JavaScript Moderno ES6+)</h3>
+        <table class="table">
+            <thead>
+                 <tr>
+                    <th>Elemento</th>
+                    <th>Descripción</th>
+                    <th>Ejemplo</th>
+                 </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>addEventListener()</td>
+                    <td>Escucha eventos del DOM</td>
+                    <td>boton.addEventListener("click", () => {});</td>
+                </tr>
+                <tr>
+                    <td>arrow function (=&gt;)</td>
+                    <td>Función flecha concisa</td>
+                    <td>const suma = (a,b) =&gt; a + b;</td>
+                </tr>
+                <tr>
+                    <td>async/await</td>
+                    <td>Manejo asíncrono moderno</td>
+                    <td>async function datos() { await fetch(url); }</td>
+                </tr>
+                <tr>
+                    <td>class</td>
+                    <td>Clases orientadas a objetos</td>
+                    <td>class Persona { constructor(n) { this.nombre=n; } }</td>
+                </tr>
+                <tr>
+                    <td>console.log()</td>
+                    <td>Imprime en consola (debug)</td>
+                    <td>console.log("Mensaje:", variable);</td>
+                </tr>
+                <tr>
+                    <td>destructuring</td>
+                    <td>Desestructuración de objetos/arrays</td>
+                    <td>const {nombre, edad} = persona;</td>
+                </tr>
+                <tr>
+                    <td>document.querySelector()</td>
+                    <td>Selecciona elemento CSS</td>
+                    <td>document.querySelector(".clase");</td>
+                </tr>
+                <tr>
+                    <td>export</td>
+                    <td>Exporta módulos</td>
+                    <td>export const utilidad = 123;</td>
+                </tr>
+                <tr>
+                    <td>fetch()</td>
+                    <td>Peticiones HTTP modernas</td>
+                    <td>fetch("api/datos").then(r =&gt; r.json());</td>
+                </tr>
+                <tr>
+                    <td>filter()</td>
+                    <td>Filtra elementos de array</td>
+                    <td>[1,2,3].filter(x =&gt; x &gt; 1); // [2,3]</td>
+                </tr>
+                <tr>
+                    <td>find()</td>
+                    <td>Busca primer elemento coincidente</td>
+                    <td>usuarios.find(u =&gt; u.id === 5);</td>
+                </tr>
+                <tr>
+                    <td>forEach()</td>
+                    <td>Itera sobre array</td>
+                    <td>lista.forEach(item =&gt; console.log(item));</td>
+                </tr>
+                <tr>
+                    <td>import</td>
+                    <td>Importa módulos</td>
+                    <td>import { funcion } from './modulo.js';</td>
+                </tr>
+                <tr>
+                    <td>includes()</td>
+                    <td>Verifica si array/string contiene</td>
+                    <td>[1,2,3].includes(2); // true</td>
+                </tr>
+                <tr>
+                    <td>JSON.parse()</td>
+                    <td>Convierte string JSON a objeto</td>
+                    <td>const obj = JSON.parse('{"a":1}');</td>
+                </tr>
+                <tr>
+                    <td>JSON.stringify()</td>
+                    <td>Convierte objeto a string JSON</td>
+                    <td>const str = JSON.stringify({a:1});</td>
+                </tr>
+                <tr>
+                    <td>localStorage</td>
+                    <td>Almacenamiento local persistente</td>
+                    <td>localStorage.setItem("clave", "valor");</td>
+                </tr>
+                <tr>
+                    <td>map()</td>
+                    <td>Transforma elementos de array</td>
+                    <td>[1,2,3].map(x =&gt; x * 2); // [2,4,6]</td>
+                </tr>
+                <tr>
+                    <td>module</td>
+                    <td>Sistema de módulos ES6</td>
+                    <td>&lt;script type="module" src="app.js"&gt;&lt;/script&gt;</td>
+                </tr>
+                <tr>
+                    <td>Object.keys()</td>
+                    <td>Obtiene claves de objeto</td>
+                    <td>Object.keys({a:1, b:2}); // ["a","b"]</td>
+                </tr>
+                <tr>
+                    <td>Object.values()</td>
+                    <td>Obtiene valores de objeto</td>
+                    <td>Object.values({a:1, b:2}); // [1,2]</td>
+                </tr>
+                <tr>
+                    <td>Promise</td>
+                    <td>Objeto para operaciones asíncronas</td>
+                    <td>new Promise((resolve, reject) =&gt; {});</td>
+                </tr>
+                <tr>
+                    <td>reduce()</td>
+                    <td>Reduce array a un solo valor</td>
+                    <td>[1,2,3].reduce((a,b) =&gt; a+b, 0); // 6</td>
+                </tr>
+                <tr>
+                    <td>setInterval()</td>
+                    <td>Ejecuta código cada X milisegundos</td>
+                    <td>setInterval(() =&gt; {}, 1000);</td>
+                </tr>
+                <tr>
+                    <td>setTimeout()</td>
+                    <td>Ejecuta código después de X ms</td>
+                    <td>setTimeout(() =&gt; alert("Hola"), 2000);</td>
+                </tr>
+                <tr>
+                    <td>spread operator (...)</td>
+                    <td>Expande arrays/objetos</td>
+                    <td>const nuevo = [...array, 4, 5];</td>
+                </tr>
+                <tr>
+                    <td>strict mode</td>
+                    <td>Modo estricto para mejor código</td>
+                    <td>"use strict";</td>
+                </tr>
+                <tr>
+                    <td>template literals (``)</td>
+                    <td>Strings con interpolación</td>
+                    <td>`Hola ${nombre}`</td>
+                </tr>
+                <tr>
+                    <td>try...catch</td>
+                    <td>Manejo de errores</td>
+                    <td>try { } catch(error) { }</td>
+                </tr>
+            </tbody>
+        </table>
     </main>
-    
+    <!-- FOOTER - Derechos reservados -->
+    <footer>
+        <p>2026 Yosef. Todos los derechos reservados.</p>
+    </footer>
     <script src="scrip.js"></script>
 </body>
 </html>

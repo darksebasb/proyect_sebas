@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name = "description" content="Podremos evidenciar por medio de esta pagina web los diferentes conceptos basicos para poder empezar a crear una pagina web desde cero">
+    <title>GitLab</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="tab-container">
+        <button id="btnHtml" class="boton-redirect" onClick="actionRedirect('index.html');">
+            HTML
+        </button>
+        <button id="btnCss" class="boton-redirect" onClick="actionRedirect('css.html');">
+            CSS
+        </button>
+        <button id="btnJavaScript" class="boton-redirect" onClick="actionRedirect('javascript.html');">
+            JavaScript
+        </button>
+        <button id="btnGit" class="boton-redirect" onClick="actionRedirect('git.html');">
+            Git
+        </button>
+        <button id="btnGitHub" class="boton-redirect" onClick="actionRedirect('github.html');">
+            GitHub
+        </button>
+        <button id="btnGitLab" class="boton-redirect" onClick="actionRedirect('gitlab.html');">
+            GitLab
+        </button>
+        <button id="btnalojamiento" class="boton-redirect" onClick="actionRedirect('alojamientoWeb.html')">
+            Alojamiento Web
+        </button>
+    </nav>
+    <main id="gitLab" class="tabcontent">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfyGFYyHXp-xaXJLhN9r_fwbzYRgBPeOmutA&s" 
+        alt="Logo gitLab">
+        <h2>¿Qué es GitLab</h2>
+        <p>es una plataforma web de desarrollo colaborativo basada en Git que ofrece un enfoque todo-en-uno (all-in-one) el cual incluye  herramientas integradas de CI/CD (Integración Continua/Despliegue Continuo) de forma nativa.</p>
+
+        <h3>¿Para qué sirve GitLab?</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Función</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Control de versiones (Git)</td>
+                    <td>Gestión de código fuente con historial completo</td>
+                </tr>
+                <tr>
+                    <td>CI/CD Integrado</td>
+                    <td>Automatización de pruebas, builds y despliegues</td>
+                </tr>
+                <tr>
+                    <td>Gestión de proyectos</td>
+                    <td>Issues, milestones, tableros Kanban, epics</td>
+                </tr>
+                <tr>
+                    <td>Registro de contenedores</td>
+                    <td>Almacena imágenes Docker</td>
+                </tr>
+                <tr>
+                    <td>Seguridad DevSecOps</td>
+                    <td>Escaneo de vulnerabilidades en código y dependencias</td>
+                </tr>
+                <tr>
+                    <td>Monitoreo y métricas</td>
+                    <td>Performance monitoring, logs, tracing</td>
+                </tr>
+                <tr>
+                    <td>Wiki y documentación</td>
+                    <td>Documentación integrada por proyecto</td>
+                </tr>
+                <tr>
+                    <td>GitLab Pages</td>
+                    <td>Hosting estático similar a GitHub Pages</td>
+                </tr>
+                <tr>
+                    <td>Infrastructure as Code</td>
+                    <td>Gestión de infraestructura mediante código</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>¿En qué casos se usa GitLab?</h3>
+        <!-- ACORDEÓN 1: Desarrollo Personal-->
+        <div class="acordeon-item">
+            <button class="acordeon-boton" onclick="toggleAcordeon('practica')">
+                1. Aprender a programar con práctica real
+                <span class="flecha">▼</span>
+            </button>
+            <div id="practica" class="acordeon-contenido">
+                <ul>
+                    <li>Guardar ejercicios y proyectos de práctica en la nube</li>
+                    <li>Ver el historial de cambios y cómo evoluciona tu código</li>
+                    <li>Recuperar versiones anteriores si algo sale mal</li>
+                    <li>Acceder a tu código desde cualquier computadora</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ACORDEÓN 2: portafolio-->
+        <div class="acordeon-item">
+            <button class="acordeon-boton" onclick="toggleAcordeon('portafolio')">
+                2. Crear tu portafolio de proyectos
+                <span class="flecha">▼</span>
+            </button>
+            <div id="portafolio" class="acordeon-contenido">
+                <ul>
+                    <li>Mostrar proyectos personales a posibles empleadores</li>
+                    <li>Documentar qué hace cada proyecto con README</li>
+                    <li>Tener un respaldo profesional de tu trabajo</li>
+                    <li>Compartir tu código con la comunidad</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ACORDEÓN 3:  3. Trabajar en proyectos grupales -->
+        <div class="acordeon-item">
+            <button class="acordeon-boton" onclick="toggleAcordeon('proyectos')">
+                3. Trabajar en proyectos grupales
+                <span class="flecha">▼</span>
+            </button>
+            <div id="proyectos" class="acordeon-contenido">
+                <ul>
+                    <li>Colaborar con compañeros de curso o bootcamp</li>
+                    <li>Ver quién hizo qué cambio y cuándo</li>
+                    <li>Evitar que se pierda el trabajo del equipo</li>
+                    <li>Revisar el código de otros antes de aceptarlo</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ACORDEÓN 4:  4. Aprender CI/CD desde el inicio        -->
+        <div class="acordeon-item">
+            <button class="acordeon-boton" onclick="toggleAcordeon('ci')">
+                4. Aprender CI/CD desde el inicio
+                <span class="flecha">▼</span>
+            </button>
+            <div id="ci" class="acordeon-contenido">
+                <ul>
+                    <li>Automatizar tareas repetitivas sin configurar herramientas externas</li>
+                    <li>Ver cómo se ejecutan pruebas automáticamente</li>
+                    <li>Desplegar tu página web automáticamente al hacer cambios</li>
+                    <li>Entender DevOps con una sola plataforma</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ACORDEÓN 5: Educación y Mentoría-->
+        <div class="acordeon-item">
+            <button class="acordeon-boton" onclick="toggleAcordeon('privado')">
+                5. Proyectos privados sin costo
+                <span class="flecha">▼</span>
+            </button>
+            <div id="privado" class="acordeon-contenido">
+                <ul>
+                    <li>Repositorios privados ilimitados gratis</li>
+                    <li>Experimentar sin miedo a que otros vean tu código inicial</li>
+                    <li>Practicar con proyectos personales antes de publicarlos</li>
+                    <li>No depender de tu computadora para guardar el código</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <!-- FOOTER - Derechos reservados -->
+    <footer>
+        <p>2026 Yosef. Todos los derechos reservados.</p>
+    </footer>
+    <script src="scrip.js"></script>
+<body>
+<html>

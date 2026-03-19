@@ -10,13 +10,25 @@
     <!-- Usar <nav> para navegación en lugar de <div> -->
     <nav class="tab-container">
         <button id="btnHtml" class="boton-redirect" onClick="actionRedirect('index.html');">
-            Ir a Página HTML
+            HTML
         </button>
         <button id="btnCss" class="boton-redirect" onClick="actionRedirect('css.html');">
-            Ir a Página CSS
+            CSS
         </button>
         <button id="btnJavaScript" class="boton-redirect" onClick="actionRedirect('javascript.html');">
-            Ir a Página JavaScript
+            JavaScript
+        </button>
+        <button id="btnGit" class="boton-redirect" onClick="actionRedirect('git.html');">
+            Git
+        </button>
+        <button id="btnGitHub" class="boton-redirect" onClick="actionRedirect('github.html');">
+            GitHub
+        </button>
+        <button id="btnGitLab" class="boton-redirect" onClick="actionRedirect('gitlab.html');">
+            GitLab
+        </button>
+        <button id="btnalojamiento" class="boton-redirect" onClick="actionRedirect('alojamientoWeb.html')">
+            Alojamiento Web
         </button>
     </nav>
 
@@ -48,8 +60,266 @@
             <li><strong>Uniformidad en el sitio:</strong> Aplicando los estilos de manera uniforme en múltiples páginas desde un mismo archivo CSS.</li>
             <li><strong>Estilos de Formulario y Multimedia:</strong> Mejora en la apariencia de botones y ajuste en el estilo de imágenes y videos.</li>
         </ul>
+        <h3>Propiedades de css básicas (Fundamentales)</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>propiedad</th>
+                    <th>descripción</th>
+                    <th>ejemplo</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>background</td>
+                    <td>Color o imagen de fondo</td>
+                    <td>background: blue;</td>
+                </tr>
+                <tr>
+                    <td>background-color</td>
+                    <td>Color de fondo específico</td>
+                    <td>background-color: #ffffff;</td>
+                </tr>
+                <tr>
+                    <td><code>border</code></td>
+                    <td>Borde alrededor del elemento</td>
+                    <td><code>border: 1px solid black;</code></td>
+                </tr>
+                <tr>
+                    <td><code>border-radius</code></td>
+                    <td>Esquinas redondeadas</td>
+                    <td><code>border-radius: 10px;</code></td>
+                </tr>
+                <tr>
+                    <td><code>box-sizing</code></td>
+                    <td>Cálculo del tamaño de caja</td>
+                    <td><code>box-sizing: border-box;</code></td>
+                </tr>
+                <tr>
+                    <td><code>color</code></td>
+                    <td>Color del texto</td>
+                    <td><code>color: red;</code></td>
+                </tr>
+                <tr>
+                    <td><code>display</code></td>
+                    <td>Tipo de visualización</td>
+                    <td><code>display: block;</code></td>
+                </tr>
+                <tr>
+                    <td><code>float</code></td>
+                    <td>Flotación del elemento</td>
+                    <td><code>float: left;</code></td>
+                </tr>
+                <tr>
+                    <td><code>font-family</code></td>
+                    <td>Tipo de letra</td>
+                    <td><code>font-family: Arial, sans-serif;</code></td>
+                </tr>
+                <tr>
+                    <td><code>font-size</code></td>
+                    <td>Tamaño de la fuente</td>
+                    <td><code>font-size: 16px;</code></td>
+                </tr>
+                <tr>
+                    <td><code>font-weight</code></td>
+                    <td>Grosor de la fuente</td>
+                    <td><code>font-weight: bold;</code></td>
+                </tr>
+                <tr>
+                    <td><code>height</code></td>
+                    <td>Altura del elemento</td>
+                    <td><code>height: 100px;</code></td>
+                </tr>
+                <tr>
+                    <td><code>line-height</code></td>
+                    <td>Altura de línea</td>
+                    <td><code>line-height: 1.5;</code></td>
+                </tr>
+                <tr>
+                    <td><code>margin</code></td>
+                    <td>Margen exterior</td>
+                    <td><code>margin: 10px;</code></td>
+                </tr>
+                <tr>
+                    <td><code>margin-bottom</code></td>
+                    <td>Margen inferior</td>
+                    <td><code>margin-bottom: 20px;</code></td>
+                </tr>
+                <tr>
+                    <td><code>margin-left</code></td>
+                    <td>Margen izquierdo</td>
+                    <td><code>margin-left: 15px;</code></td>
+                </tr>
+                <tr>
+                    <td><code>margin-right</code></td>
+                    <td>Margen derecho</td>
+                    <td><code>margin-right: 15px;</code></td>
+                </tr>
+                <tr>
+                    <td><code>margin-top</code></td>
+                    <td>Margen superior</td>
+                    <td><code>margin-top: 20px;</code></td>
+                </tr>
+                <tr>
+                    <td><code>padding</code></td>
+                    <td>Espacio interior</td>
+                    <td><code>padding: 10px;</code></td>
+                </tr>
+                <tr>
+                    <td><code>padding-bottom</code></td>
+                    <td>Padding inferior</td>
+                    <td><code>padding-bottom: 5px;</code></td>
+                </tr>
+                <tr>
+                    <td><code>padding-left</code></td>
+                    <td>Padding izquierdo</td>
+                    <td><code>padding-left: 10px;</code></td>
+                </tr>
+                <tr>
+                    <td><code>padding-right</code></td>
+                    <td>Padding derecho</td>
+                    <td><code>padding-right: 10px;</code></td>
+                </tr>
+                <tr>
+                    <td><code>padding-top</code></td>
+                    <td>Padding superior</td>
+                    <td><code>padding-top: 5px;</code></td>
+                </tr>
+                <tr>
+                    <td><code>text-align</code></td>
+                    <td>Alineación del texto</td>
+                    <td><code>text-align: center;</code></td>
+                </tr>
+                <tr>
+                    <td><code>text-decoration</code></td>
+                    <td>Decoración del texto</td>
+                    <td><code>text-decoration: none;</code></td>
+                </tr>
+                <tr>
+                    <td><code>width</code></td>
+                    <td>Ancho del elemento</td>
+                    <td><code>width: 50%;</code></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Propiedades de css más utilizadas (actualmente)</h3>
+        <table class="table">
+            <thead>
+                    <tr>
+                        <th>Propiedad</th>
+                        <th>Descripción</th>
+                        <th>Ejemplo</th>
+                    </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>align-items</code></td>
+                    <td>Alineación en eje transversal (flexbox)</td>
+                    <td><code>align-items: center;</code></td>
+                </tr>
+                <tr>
+                    <td><code>animation</code></td>
+                    <td>Animaciones CSS</td>
+                    <td><code>animation: fadeIn 2s ease;</code></td>
+                </tr>
+                <tr>
+                    <td><code>backdrop-filter</code></td>
+                    <td>Efecto de desenfoque detrás</td>
+                    <td><code>backdrop-filter: blur(10px);</code></td>
+                </tr>
+                <tr>
+                    <td><code>box-shadow</code></td>
+                    <td>Sombra de caja</td>
+                    <td><code>box-shadow: 0 4px 6px rgba(0,0,0,0.1);</code></td>
+                </tr>
+                <tr>
+                    <td><code>cursor</code></td>
+                    <td>Tipo de cursor</td>
+                    <td><code>cursor: pointer;</code></td>
+                </tr>
+                <tr>
+                    <td><code>flex</code></td>
+                    <td>Abreviatura de flexbox</td>
+                    <td><code>flex: 1;</code></td>
+                </tr>
+                <tr>
+                    <td><code>flex-direction</code></td>
+                    <td>Dirección de los elementos flex</td>
+                    <td><code>flex-direction: column;</code></td>
+                </tr>
+                <tr>
+                    <td><code>flex-wrap</code></td>
+                    <td>Envoltura de elementos flex</td>
+                    <td><code>flex-wrap: wrap;</code></td>
+                </tr>
+                <tr>
+                    <td><code>gap</code></td>
+                    <td>Espacio entre elementos (grid/flex)</td>
+                    <td><code>gap: 20px;</code></td>
+                </tr>
+                <tr>
+                    <td><code>grid</code></td>
+                    <td>Sistema de cuadrícula</td>
+                    <td><code>grid: auto / 1fr 1fr;</code></td>
+                </tr>
+                <tr>
+                    <td><code>grid-template-columns</code></td>
+                    <td>Columnas de la cuadrícula</td>
+                    <td><code>grid-template-columns: 1fr 1fr;</code></td>
+                </tr>
+                <tr>
+                    <td><code>justify-content</code></td>
+                    <td>Alineación en eje principal</td>
+                    <td><code>justify-content: space-between;</code></td>
+                </tr>
+                <tr>
+                    <td><code>object-fit</code></td>
+                    <td>Ajuste de imagen/video</td>
+                    <td><code>object-fit: cover;</code></td>
+                </tr>
+                <tr>
+                    <td><code>opacity</code></td>
+                    <td>Transparencia</td>
+                    <td><code>opacity: 0.8;</code></td>
+                </tr>
+                <tr>
+                    <td><code>overflow</code></td>
+                    <td>Comportamiento del desbordamiento</td>
+                    <td><code>overflow: hidden;</code></td>
+                </tr>
+                <tr>
+                    <td><code>position</code></td>
+                    <td>Tipo de posicionamiento</td>
+                    <td><code>position: relative;</code></td>
+                </tr>
+                <tr>
+                    <td><code>top / right / bottom / left</code></td>
+                    <td>Posición específica</td>
+                    <td><code>top: 10px; left: 20px;</code></td>
+                </tr>
+                <tr>
+                    <td><code>transform</code></td>
+                    <td>Transformaciones 2D/3D</td>
+                    <td><code>transform: rotate(45deg);</code></td>
+                </tr>
+                <tr>
+                    <td><code>transition</code></td>
+                    <td>Transiciones suaves</td>
+                    <td><code>transition: all 0.3s ease;</code></td>
+                </tr>
+                <tr>
+                    <td><code>z-index</code></td>
+                    <td>Orden de apilamiento</td>
+                    <td><code>z-index: 10;</code></td>
+                </tr>
+            </tbody>
+        </table>
     </main>
-    
+    <!-- FOOTER - Derechos reservados -->
+    <footer>
+        <p>2026 Yosef. Todos los derechos reservados.</p>
+    </footer>
     <script src="scrip.js"></script>
 </body>
 </html>

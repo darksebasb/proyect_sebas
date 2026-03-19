@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name = "description" content="Podremos evidenciar por medio de esta pagina web los diferentes conceptos basicos para poder empezar a crear una pagina web desde cero">
+    <title>Git</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="tab-container">
+        <button id="btnHtml" class="boton-redirect" onClick="actionRedirect('index.html');">
+            HTML
+        </button>
+        <button id="btnCss" class="boton-redirect" onClick="actionRedirect('css.html');">
+            CSS
+        </button>
+        <button id="btnJavaScript" class="boton-redirect" onClick="actionRedirect('javascript.html');">
+            JavaScript
+        </button>
+        <button id="btnGit" class="boton-redirect" onClick="actionRedirect('git.html');">
+            Git
+        </button>
+        <button id="btnGitHub" class="boton-redirect" onClick="actionRedirect('github.html');">
+            GitHub
+        </button>
+        <button id="btnGitLab" class="boton-redirect" onClick="actionRedirect('gitlab.html');">
+            GitLab
+        </button>
+        <button id="btnalojamiento" class="boton-redirect" onClick="actionRedirect('alojamientoWeb.html')">
+            Alojamiento Web
+        </button>
+    </nav>
+    <main id="GIT" class="tabcontent">´
+        <img src="https://linube.com/blog/wp-content/uploads/que-es-git.png"
+            alt="Logo git">
+        <h2>¿Qué es git?</h2>
+        <p>
+            es un sistema de control de versiones distribuido que permite rastrear y gestionar los cambios realizados en archivos de código fuente durante el desarrollo de software.
+        </p>
+        <h3>¿Para qué sirve git?</h3>
+        <ul>
+            <li>Control de versiones: Guarda el historial completo de cambios en tu código</li>
+            <li>Trabajo colaborativo: Permite que varios desarrolladores trabajen simultáneamente sin conflictos</li>
+            <li>Gestión de ramas: Crea líneas de desarrollo paralelas (features, correcciones, experimentos)</li>
+            <li>Recuperación de cambios: Permite volver a versiones anteriores si algo sale mal</li>
+            <li>Respaldo del código: Cada copia del repositorio es un backup completo</li>
+            <li>Revisión de código: Facilita la revisión y aprobación de cambios antes de integrarlos</li>
+        </ul>
+        <h3>¿En qué casos se usa git</h3>
+        <!-- ACORDEÓN 1: Desarrollo de software -->
+        <div class="acordeon-item">
+            <button class="acordeon-boton" onclick="toggleAcordeon('desarrollo')">
+                Desarrollo de software
+                <span class="flecha">▼</span>
+            </button>
+            <div id="desarrollo" class="acordeon-contenido">
+                <ul>
+                    <li>Proyectos personales (portafolio, prácticas)</li>
+                    <li>Proyectos en equipo (startups, empresas, open source)</li>
+                    <li>Aplicaciones web, móviles, de escritorio</li>
+                    <li>Sistemas embebidos y IoT</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ACORDEÓN 2: Gestión de código -->
+        <div class="acordeon-item">
+            <button class="acordeon-boton" onclick="toggleAcordeon('gestion')">
+                Gestión de código
+                <span class="flecha">▼</span>
+            </button>
+            <div id="gestion" class="acordeon-contenido">
+                <ul>
+                    <li>Controlar versiones de archivos de configuración</li>
+                    <li>Documentación técnica</li>
+                    <li>Scripts de automatización</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ACORDEÓN 3: Colaboración -->
+        <div class="acordeon-item">
+            <button class="acordeon-boton" onclick="toggleAcordeon('colaboracion')">
+                Colaboración
+                <span class="flecha">▼</span>
+            </button>
+            <div id="colaboracion" class="acordeon-contenido">
+                <ul>
+                    <li>Trabajo remoto con equipos distribuidos</li>
+                    <li>Code review antes de publicar cambios</li>
+                    <li>Integración continua y despliegue (CI/CD)</li>
+                </ul>
+            </div>
+        </div>
+
+    
+    </main>
+    <!-- FOOTER - Derechos reservados -->
+    <footer>
+        <p>2026 Yosef. Todos los derechos reservados.</p>
+    </footer>
+    <script src="scrip.js"></script>
+<body>
+<html>

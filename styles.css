@@ -343,3 +343,109 @@ footer p::before {
   margin-right: 5px;
   font-size: 1.1rem;
 }
+
+
+/* ============================================
+   DROPDOWN/SUBMENÚ - PROGRAMACIÓN
+   ============================================ */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    background: linear-gradient(135deg, var(--color-secundario), #a855f7);
+    color: var(--color-blanco);
+    border: 2px solid transparent;
+}
+
+.dropdown-btn:hover {
+    background: linear-gradient(135deg, #7c4fe0, #9333ea);
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-hover);
+}
+
+/* Estado activo del botón dropdown */
+.dropdown-btn.activo {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+}
+
+/* Rotar flecha cuando está abierto */
+.dropdown-btn.activo {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+}
+
+/* Contenido del submenú */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: var(--color-blanco);
+    min-width: 220px;
+    border-radius: var(--radio-bordes);
+    box-shadow: var(--sombra-hover);
+    z-index: 1000;
+    top: calc(100% + 8px);
+    left: 0;
+    overflow: hidden;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Mostrar submenú */
+.dropdown-content.show {
+    display: block;
+}
+
+/* Items del submenú */
+.dropdown-item {
+    display: block;
+    padding: 14px 20px;
+    color: var(--color-texto);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-bottom: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+    background: var(--color-blanco);
+}
+
+.dropdown-item:last-child {
+    border-bottom: none;
+}
+
+.dropdown-item:hover {
+    background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
+    color: var(--color-blanco);
+    padding-left: 25px;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Flecha rotada cuando está activo */
+.dropdown-btn.activo {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+}
+
+/* Responsive para móvil */
+@media (max-width: 600px) {
+    .dropdown {
+        width: 100%;
+    }
+    
+    .dropdown-content {
+        position: static;
+        width: 100%;
+        margin-top: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+}

@@ -65,3 +65,56 @@ function toggleAcordeon(id) {
         boton.classList.add('activo');
     }
 }
+
+
+
+// ============================================
+// DROPDOWN/SUBMENÚ PROGRAMACIÓN
+// ============================================
+
+/**
+ * Abre o cierra el submenú de Programación
+ * @param {Event} event - Evento del click
+ */
+function toggleDropdown(event) {
+    event.stopPropagation();
+    
+    const dropdown = document.getElementById('submenuProgramacion');
+    const boton = event.currentTarget;
+    
+    // Verificar si ya está abierto
+    const estaAbierto = dropdown.classList.contains('show');
+    
+    // Cerrar todos los dropdowns abiertos primero
+    cerrarTodosDropdowns();
+    
+    // Si no estaba abierto, abrirlo
+    if (!estaAbierto) {
+        dropdown.classList.add('show');
+        boton.classList.add('activo');
+    }
+}
+
+/**
+ * Cierra todos los dropdowns abiertos
+ */
+function cerrarTodosDropdowns() {
+    document.querySelectorAll('.dropdown-content').forEach(menu => {
+        menu.classList.remove('show');
+    });
+    document.querySelectorAll('.dropdown-btn').forEach(btn => {
+        btn.classList.remove('activo');
+    });
+}
+
+// Cerrar dropdown al hacer clic fuera
+document.addEventListener('click', function(event) {
+    if (!event.target.closest('.dropdown')) {
+        cerrarTodosDropdowns();
+    }
+});
+
+// Cerrar dropdown al redimensionar ventana (evita problemas visuales)
+window.addEventListener('resize', function() {
+    cerrarTodosDropdowns();
+});

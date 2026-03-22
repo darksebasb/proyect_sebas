@@ -29,6 +29,18 @@
         <button id="btnalojamiento" class="boton-redirect" onClick="actionRedirect('alojamientoWeb.html')">
             Alojamiento Web
         </button>
+        <!-- Botón Programación con Submenú -->
+        <div class="dropdown">
+            <button id="btnprogramacion" class="boton-redirect dropdown-btn" onclick="toggleDropdown(event)">
+                Programación ▼
+            </button>
+            <div class="dropdown-content" id="submenuProgramacion">
+                <a href="estructuras-datos.html">Estructura de datos</a>
+                <a href="ciclos.html">Ciclos</a>
+                <a href="condicionales.html">Condicionales</a>
+            </div>
+        </div>
+
     </nav>
 
     <main id="JavaScript" class="tabcontent">

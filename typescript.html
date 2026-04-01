@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name = "description" content="Podremos evidenciar por medio de esta pagina web los diferentes conceptos basicos para poder empezar a crear una pagina web desde cero">
+    <title>typescrip</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="tab-container">
+        <button id="btnHtml" class="boton-redirect" onClick="actionRedirect('index.html');">
+            HTML
+        </button>
+        <button id="btnCss" class="boton-redirect" onClick="actionRedirect('css.html');">
+            CSS
+        </button>
+        <button id="btnJavaScript" class="boton-redirect" onClick="actionRedirect('javascript.html');">
+            JavaScript
+        </button>
+        <button id="btnGit" class="boton-redirect" onClick="actionRedirect('git.html');">
+            Git
+        </button>
+        <button id="btnGitHub" class="boton-redirect" onClick="actionRedirect('github.html');">
+            GitHub
+        </button>
+        <button id="btnGitLab" class="boton-redirect" onClick="actionRedirect('gitlab.html');">
+            GitLab
+        </button>
+        <button id="btnalojamiento" class="boton-redirect" onClick="actionRedirect('alojamientoWeb.html')">
+            Alojamiento Web
+        </button>
+
+        <!-- Botón Programación con Submenú -->
+        <div class="dropdown">
+            <button id="btnprogramacion" class="boton-redirect dropdown-btn" onclick="toggleDropdown(event)">
+                Programación ▼
+            </button>
+            <div class="dropdown-content" id="submenuProgramacion">
+                <ul>
+                    <a href="estructuras-datos.html">Estructura de datos</a>
+                    <a href="ciclos.html">Ciclos</a>
+                    <a href="condicionales.html">Condicionales</a>
+                </ul>
+            </div>
+        </div>
+        <button id="btntypescript" class="boton-redirect" onClick="actionRedirect('typescript.html')">
+            typescript
+        </button>
+    </nav>
+    <main id="typescript" class="tabcontent">
+        <img src="https://cdn.thenewstack.io/media/2022/01/10b88c68-typescript-logo.png"
+        alt="logo tyypescript">
+        <h2>¿Que es tyypescript?</h2>
+        <p>
+            es un lenguaje de programación que funciona como un "mejorador" de JavaScript
+        </p>
+        <h3>¿Para que sirve typescrip?</h3>
+        <p> 
+            Permite identificar los pequeños errores de forma rapida de tal manera que no sea tan complejo a la hora de programar
+            y a su vez proporciona sugerencias de autocompletado ya que entiende lo que estamos construyendo en el codigo.
+        </p>
+        <h3>¿En qué casos se usa typescript?</h3>
+        <p>
+            Su uso destaca especialmente en situaciones donde la seguridad y el orden son prioritarios.
+        </p>
+        <!-- ACORDEÓN 1: Desarrollo de software -->
+        <div class="acordeon-item">
+            <button class="acordeon-boton" onclick="toggleAcordeon('proyectos')">
+                1. Proyectos de gran escala y equipos grandes
+                <span class="flecha">▼</span>
+            </button>
+            <div id="proyectos" class="acordeon-contenido">
+                <p>
+                    cuando varias personas estan trabajando en el mismo codigo exige que se siga el mismo orden
+                    evitando que cuando se presente algun error por parte de algun integrante no se logre identificar y dañe el codigo
+                </p>
+            </div>
+        </div>
+
+        <!-- ACORDEÓN 2: Gestión de código -->
+        <div class="acordeon-item">
+            <button class="acordeon-boton" onclick="toggleAcordeon('aplicaciones')">
+                2. Aplicaciones web complejas (Frontend)
+                <span class="flecha">▼</span>
+            </button>
+            <div id="aplicaciones" class="acordeon-contenido">
+                <p>
+                    Se utiliza masivamente para crear sitios web con mucha interactividad. Es la opción preferida (o incluso obligatoria) 
+                    al trabajar con herramientas modernas como:
+                </p>
+                <ul>
+                    <li>Angular: Está construido totalmente con TypeScript.</li>
+                    <li>React y Vue: Aunque permiten JavaScript, la mayoría de las empresas usan TypeScript
+                        para que sus componentes sean más fáciles de entender y reutilizar.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ACORDEÓN 3: Desarrollo -->
+        <div class="acordeon-item">
+            <button class="acordeon-boton" onclick="toggleAcordeon('desarrollo')">
+                3. Desarrollo de servidores (Backend)
+                <span class="flecha">▼</span>
+            </button>
+            <div id="desarrollo" class="acordeon-contenido">
+                <p>
+                    Se usa mucho en el lado del servidor con Node.js o Deno. Frameworks como NestJS lo utilizan para crear sistemas bancarios, tiendas en línea o redes sociales que necesitan ser muy estables y procesar datos de forma segura.
+                </p>
+            </div>
+        </div>
+
+        <!-- ACORDEÓN 4: Colaboración -->
+        <div class="acordeon-item">
+            <button class="acordeon-boton" onclick="toggleAcordeon('moviles')">
+                4. Aplicaciones móviles
+                <span class="flecha">▼</span>
+            </button>
+            <div id="moviles" class="acordeon-contenido">
+                <p>
+                   A través de herramientas como React Native o Ionic, los desarrolladores usan TypeScript para crear aplicaciones que instalas en tu teléfono (Android o iOS)
+                </p>
+            </div>
+        </div>
+
+
+        <!-- ACORDEÓN 5: bibliotecas -->
+        <div class="acordeon-item">
+            <button class="acordeon-boton" onclick="toggleAcordeon('bibliotecas')">
+                5. Creación de bibliotecas (Libraries)
+                <span class="flecha">▼</span>
+            </button>
+            <div id="bibliotecas" class="acordeon-contenido">
+                <p>
+                    Si alguien crea una herramienta para que otros programadores la usen, suele escribirla en TypeScript. Esto permite que el usuario final reciba ayuda automática del editor (autocompletado) y sepa exactamente qué datos debe enviar a cada función.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER - Derechos reservados -->
+    <footer>
+        <p>2026 Yosef. Todos los derechos reservados.</p>
+    </footer>
+    <script src="scrip.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name = "description" content="Podremos evidenciar por medio de esta pagina web los diferentes conceptos basicos para poder empezar a crear una pagina web desde cero">
+    <title>HTML - Introducción</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="tab-container">
+        <button id="btnHtml" class="boton-redirect" onClick="actionRedirect('index.html');">
+            HTML
+        </button>
+        <button id="btnCss" class="boton-redirect" onClick="actionRedirect('css.html');">
+            CSS
+        </button>
+        <button id="btnJavaScript" class="boton-redirect" onClick="actionRedirect('javascript.html');">
+            JavaScript
+        </button>
+        <button id="btnGit" class="boton-redirect" onClick="actionRedirect('git.html');">
+            Git
+        </button>
+        <button id="btnGitHub" class="boton-redirect" onClick="actionRedirect('github.html');">
+            GitHub
+        </button>
+        <button id="btnGitLab" class="boton-redirect" onClick="actionRedirect('gitlab.html');">
+            GitLab
+        </button>
+        <button id="btnalojamiento" class="boton-redirect" onClick="actionRedirect('alojamientoWeb.html')">
+            Alojamiento Web
+        </button>
+
+          <!-- Botón Programación con Submenú -->
+        <div class="dropdown">
+            <button id="btnprogramacion" class="boton-redirect dropdown-btn" onclick="toggleDropdown(event)">
+                Programación ▼
+            </button>
+            <div class="dropdown-content" id="submenuProgramacion">
+                <ul>
+                    <a href="estructuras-datos.html">Estructura de datos</a>
+                    <a href="ciclos.html">Ciclos</a>
+                    <a href="condicionales.html">Condicionales</a>
+                </ul>
+            </div>
+        </div>
+    <nav>
+    <script src="scrip.js"></script>
+</body>
+<html>

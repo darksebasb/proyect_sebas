@@ -12,14 +12,14 @@ Ciclos
 Y por último condicionales
 
 21 MARZO 
-TAREA: (TODO LO DE INVESTIGACION DEBE DE LLEVAR "QUE ES, PARA QUE, CUANDO "Y ENTENDER LOS CONCEPTOS)
+TAREA: (TODO LO DE INVESTIGACION DEBE DE LLEVAR "QUE ES, PARA QUE SIRVE, CUANDO SE USA "Y ENTENDER LOS CONCEPTOS)
 1. Revisar todos los conceptos y si los entiende dejarlos como estan, sino profundisarlos de tal manera que usted los entienda y actualizar en la documentacion.
 2. buscar typescript
 3. buscar freemworks
 4. Cual es la diferencia entre back y front
 5. buscar endpoint
 6.En el repositorio crear una rama que se llame desarrollo y sera la rama que se utilizara localmente
-NOTA: RECORDARLE A CAMILO QUE HAY QUE HACER MERGE O PULL REQUEST 
+NOTA: RECORDARLE A CAMILO QUE HAY QUE HACER MERGE O PULL REQUEST
 
 
 MEGA TAREA: (Terminar para el 25 de abril) html trainer

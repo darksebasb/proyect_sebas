@@ -449,3 +449,29 @@ footer p::before {
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 }
+/* ============================================
+   BOTÓN DE PÁGINA ACTIVA (Navegación)
+   ============================================ */
+
+/* Estilo para indicar en qué página estás actualmente */
+.boton-redirect.pagina-activa {
+    background: var(--color-primario);
+    color: var(--color-blanco);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+}
+
+/* Para el dropdown cuando está en una subpágina */
+.dropdown-btn.pagina-activa {
+    background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
+    color: var(--color-blanco);
+}
+
+/* ============================================
+   DROPDOWN ABIERTO (Estado temporal)
+   ============================================ */
+
+/* Solo cuando el dropdown está desplegado */
+.dropdown-btn.dropdown-abierto {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    transform: translateY(-2px);
+}

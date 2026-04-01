@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<body lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,7 @@
     <title>HTML - Introducción</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+</body>
     <nav class="tab-container">
         <button id="btnHtml" class="boton-redirect" onClick="actionRedirect('index.html');">
             HTML
@@ -31,7 +31,7 @@
             Alojamiento Web
         </button>
 
-          <!-- Botón Programación con Submenú -->
+        <!-- Botón Programación con Submenú -->
         <div class="dropdown">
             <button id="btnprogramacion" class="boton-redirect dropdown-btn" onclick="toggleDropdown(event)">
                 Programación ▼
@@ -44,7 +44,139 @@
                 </ul>
             </div>
         </div>
-    <nav>
+        <button id="btntypescript" class="boton-redirect" onClick="actionRedirect('typescript.html')">
+            typescript
+        </button>
+        <button id="btnfreemworks" class="boton-redirect" onClick="actionRedirect('freemwoks.html')">
+            Freemworks
+        </button>
+    </nav>
+    <main id="freemworks" class="tabcontent">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvwL3ImX43x97i99JpvUfuNj4TUksjf8npTA&s"
+        alt="Logo fremworks">
+        <h2>¿Que es freemwoks?</h2>
+        <p>
+            es una estructura o plantilla prefabricada que los programadores usan para no tener que empezar sus aplicaciones desde cero.
+        </p>
+
+        <h3>¿Para qué sirve freemwoks?</h3>
+        <ul>
+            <li>Ahorrar tiempo: teniendo en cuenta que ofrese el 80% del codigo necesario de tal manera que solo nos tenemos que encargar del 20% restante</li>
+            <li>Organización: Te obliga a seguir un orden específico, lo que hace que el código sea más limpio y fácil de entender para otros programadores.</li>
+            <li>Seguridad: Suelen incluir protecciones automáticas contra errores comunes y ataques informáticos</li>
+        </ul>
+
+        <h3>¿En que casos se usa freemworks?</h3>
+        <p>Los frameworks se utilizan en casi cualquier proyecto profesional hoy en día,</p>
+        <!-- ACORDEÓN 1: Proyectos grandes -->
+        <div class="acordeon-item">
+            <button class="acordeon-boton" onclick="toggleAcordeon('proyecto')">
+                Proyectos grandes y complejos
+                <span class="flecha">▼</span>
+            </button>
+            <div id="proyecto" class="acordeon-contenido">
+                <p>
+                    si vamos a crear una aplicacion grande como por ejemplo: (Instagram, amazon y netflix)
+                    hay miles de piezas que deben encajar, el freemwork permite que el equipo no se pierda y sea estable el sistema
+                </p>
+            </div>
+        </div>
+
+        <!-- ACORDEÓN 2: Seguridad -->
+        <div class="acordeon-item">
+            <button class="acordeon-boton" onclick="toggleAcordeon('seguridad')">
+                Máxima seguridad
+                <span class="flecha">▼</span>
+            </button>
+            <div id="seguridad" class="acordeon-contenido">
+                <p>
+                  Si vamos a manejar datos sensibles Los frameworks como Django o Spring ya vienen con "escudos" integrados contra ataques comunes  
+                </p>
+            </div>
+        </div>
+        <!-- ACORDEÓN 3: equipo -->
+        <div class="acordeon-item">
+            <button class="acordeon-boton" onclick="toggleAcordeon('equipo')">
+                trabajo en equipo
+                <span class="flecha">▼</span>
+            </button>
+            <div id="equipo" class="acordeon-contenido">
+                <p>
+                 si trabajaramos solos sabriados donde poner el codigo. Pero cuando trabajos con 2 o mas ppersonas
+                 el fremwork interpone una estructura estandar en donde saben en que carpeta esta cada cosa que se necesite
+                </p>
+            </div>
+        </div>
+
+        <!-- ACORDEÓN 4: tiempo -->
+        <div class="acordeon-item">
+            <button class="acordeon-boton" onclick="toggleAcordeon('tiempo')">
+                Tiempo de entrega corto (Deadlines)
+                <span class="flecha">▼</span>
+            </button>
+            <div id="tiempo" class="acordeon-contenido">
+                <p>
+                  Si vamos a manejar datos sensibles Los frameworks como Django o Spring ya vienen con "escudos" integrados contra ataques comunes  
+                </p>
+            </div>
+        </div>
+
+        <h3>framework más usados actualmente</h3>
+        <!-- ACORDEÓN 1: Páginas -->
+        <div class="acordeon-item">
+            <button class="acordeon-boton" onclick="toggleAcordeon('Páginas')">
+                1. Páginas Web: React (de Meta/Facebook)
+                <span class="flecha">▼</span>
+            </button>
+            <div id="Páginas" class="acordeon-contenido">
+                <p>
+                    Es el <strong>rey absoluto</strong> actualmente.
+                </p>
+                <p>
+                    <strong>¿Por qué usarlo?:</strong> Casi todas las empresas (Airbnb, Netflix, Facebook) lo usan. Si aprendes React, te será muy fácil encontrar trabajo.
+                </p>
+                <p>
+                    <em>Dato extra:</em> Se lleva de maravilla con TypeScript, que es de lo que hablábamos al principio.
+                </p>
+            </div>
+        </div>
+
+        <!-- ACORDEÓN 2: Páginas -->
+        <div class="acordeon-item">
+            <button class="acordeon-boton" onclick="toggleAcordeon('aplicaciones')">
+                2. Aplicaciones Móviles: Flutter (de Google)
+                <span class="flecha">▼</span>
+            </button>
+            <div id="aplicaciones" class="acordeon-contenido">
+                <p>
+                    Si tu sueño es hacer apps para celular que la gente descargue en la App Store o Play Store.
+                </p>
+                <p>
+                    <strong>¿Por qué usarlo?:</strong> Escribes el código una sola vez y funciona perfectamente tanto en Android como en iPhone. Te ahorra el doble de trabajo.
+                </p>
+            </div>
+        </div>
+
+        <!-- ACORDEÓN 3: web -->
+        <div class="acordeon-item">
+            <button class="acordeon-boton" onclick="toggleAcordeon('web')">
+                3. el "Cerebro" de la Web (Servidores): Express.js
+                <span class="flecha">▼</span>
+            </button>
+            <div id="web" class="acordeon-contenido">
+                <p>
+                    Si te interesa más cómo se guardan los datos, las contraseñas y la lógica que no se ve.
+                </p>
+                <p>
+                    <strong>¿Por qué usarlo?:</strong> Usa JavaScript, así que si ya sabes un poco del lenguaje base, aprender este framework es muy rápido.
+                </p>
+            </div>
+        </div>
+    </main>
+    <!-- FOOTER - Derechos reservados -->
+    <footer>
+        <p>2026 Yosef. Todos los derechos reservados.</p>
+    </footer>
     <script src="scrip.js"></script>
 </body>
-<html>
+</html>

@@ -41,10 +41,101 @@
                     <a href="estructuras-datos.html">Estructura de datos</a>
                     <a href="ciclos.html">Ciclos</a>
                     <a href="condicionales.html">Condicionales</a>
+                    <a href="typescript.html">Typescript</a>
+                    <a href="freemworks.html">Freemwoks</a>
+                    <a href="backyfront.html">Back y front</a>
+                    <a href="endpoint.html">Endpoint</a>
                 </ul>
             </div>
         </div>
-    <nav>
+    </nav>
+    <main id="endpoint" class="tabcontent">
+        <img src="https://tec-innova.mx/wp-content/uploads/2022/05/EndPoint.jpg"
+        alt="Logo endpoint">
+        <h2>¿Que es un endpoint?</h2>
+        <p>
+            Es una dirección específica (parecida a una URL de una página web)
+        </p>
+
+        <h3>¿Para qué sirve endpoint?</h3>
+        <p>Cada Endpoint tiene una tarea única. Por ejemplo, en una tienda online podrías tener:</p>
+        <ul>
+            <li>Un endpoint para ver productos: /productos</li>
+            <li>Un endpoint para pagar: /pagar</li>
+            <li>Un endpoint para crear cuenta: /registro</li>
+        </ul>
+        <h3>¿En que casos se usa endpoint?</h3>
+        <p>
+            se usa cada vez que una aplicación (el Frontend) necesita pedir, enviar, guardar o borrar información que no tiene a mano y que está guardada en un servidor (el Backend).
+        </p>
+        <strong>los casos mas comunes en los que se usa endpoint son:</strong>
+
+        <!-- ACORDEÓN 1: Mostrar informacion -->
+        <div class="acordeon-item">
+            <button class="acordeon-boton" onclick="toggleAcordeon('Mostrar informacion')">
+                1. Mostrar información (Pedir datos)
+                <span class="flecha">▼</span>
+            </button>
+            <div id="Mostrar informacion" class="acordeon-contenido">
+                <p>
+                    ingresas en una aplicacion. Pero no tiene guardada todo la informacion en tu celular o computador
+                </p>
+                <ul>
+                    <li>El caso: La app toca el endpoint /peliculas-tendencia.</li>
+                    <li>El resultado: El servidor le responde con la lista de portadas y nombres que ves en pantalla.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ACORDEÓN 2: guardar informacion -->
+        <div class="acordeon-item">
+            <button class="acordeon-boton" onclick="toggleAcordeon('Guardar informacion')">
+                2. Guardar información nueva (Enviar datos)
+                <span class="flecha">▼</span>
+            </button>
+            <div id="Guardar informacion" class="acordeon-contenido">
+                <p>Se usa cuando creas algo que antes no existía.</p>
+                <ul>
+                    <li>El caso: Cuando te registras en una red social y llenas el formulario con tu nombre y correo, al darle al botón "Registrar", esos datos viajan a un endpoint llamado /crear-usuario.</li>
+                    <li>El resultado: El servidor recibe tus datos y los guarda para siempre en su base de datos.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ACORDEÓN 3: Seguridad -->
+        <div class="acordeon-item">
+            <button class="acordeon-boton" onclick="toggleAcordeon('Seguridad')">
+                3. Validar quién eres (Seguridad)
+                <span class="flecha">▼</span>
+            </button>
+            <div id="Seguridad" class="acordeon-contenido">
+                <p>Se usa para procesos de "identificación".</p>
+                <ul>
+                    <li>El caso: Cuando escribes tu usuario y contraseña en Facebook. Esos datos van al endpoint /login.</li>
+                    <li>El resultado: El servidor revisa si la contraseña es correcta. Si lo es, te deja pasar; si no, le dice al Frontend que muestre un error en rojo.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ACORDEÓN 4: conectar servicios -->
+        <div class="acordeon-item">
+            <button class="acordeon-boton" onclick="toggleAcordeon('conectar servicios')">
+                4. Conectar diferentes servicios
+                <span class="flecha">▼</span>
+            </button>
+            <div id="conectar servicios" class="acordeon-contenido">
+                <p>A veces, un programa necesita hablar con otro que no es suyo.</p>
+                <ul>
+                    <li>El caso: Una página de clima usa un endpoint de Google Maps para saber dónde estás exactamente.</li>
+                    <li>El resultado: Google le "presta" la ubicación a través de ese endpoint para que la página te diga si va a llover en tu ciudad.</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <!-- FOOTER - Derechos reservados -->
+    <footer>
+        <p>2026 Yosef. Todos los derechos reservados.</p>
+    </footer>
     <script src="scrip.js"></script>
 </body>
-<html>
+</html>

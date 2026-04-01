@@ -343,8 +343,6 @@ footer p::before {
   margin-right: 5px;
   font-size: 1.1rem;
 }
-
-
 /* ============================================
    DROPDOWN/SUBMENÚ - PROGRAMACIÓN
    ============================================ */
@@ -366,17 +364,7 @@ footer p::before {
     box-shadow: var(--sombra-hover);
 }
 
-/* Estado activo del botón dropdown */
-.dropdown-btn.activo {
-    background: linear-gradient(135deg, #4f46e5, #7c3aed);
-}
-
-/* Rotar flecha cuando está abierto */
-.dropdown-btn.activo {
-    background: linear-gradient(135deg, #4f46e5, #7c3aed);
-}
-
-/* Contenido del submenú */
+/* Contenido del submenú - POSICIÓN CORREGIDA */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -385,8 +373,9 @@ footer p::before {
     border-radius: var(--radio-bordes);
     box-shadow: var(--sombra-hover);
     z-index: 1000;
-    top: calc(100% + 8px);
+    top: 100%; /* Justo debajo del botón */
     left: 0;
+    margin-top: 8px; /* Espacio entre botón y menú */
     overflow: hidden;
     animation: fadeIn 0.3s ease;
 }
@@ -396,8 +385,16 @@ footer p::before {
     display: block;
 }
 
-/* Items del submenú */
-.dropdown-item {
+/* Items del submenú - ESTILOS CORREGIDOS */
+.dropdown-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Vertical */
+}
+
+.dropdown-content a {
     display: block;
     padding: 14px 20px;
     color: var(--color-texto);
@@ -407,13 +404,14 @@ footer p::before {
     border-bottom: 1px solid #e2e8f0;
     transition: all 0.3s ease;
     background: var(--color-blanco);
+    white-space: nowrap; /* Evita que el texto se parta */
 }
 
-.dropdown-item:last-child {
+.dropdown-content a:last-child {
     border-bottom: none;
 }
 
-.dropdown-item:hover {
+.dropdown-content a:hover {
     background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
     color: var(--color-blanco);
     padding-left: 25px;
@@ -432,18 +430,65 @@ footer p::before {
 }
 
 /* Flecha rotada cuando está activo */
-.dropdown-btn.activo {
+.dropdown-btn.dropdown-abierto {
     background: linear-gradient(135deg, #4f46e5, #7c3aed);
 }
 
-/* Responsive para móvil */
-@media (max-width: 600px) {
+/* ============================================
+   BOTÓN ACTIVO EN NAVEGACIÓN
+   ============================================ */
+
+.boton-redirect.activo {
+    background: var(--color-primario) !important;
+    color: var(--color-blanco) !important;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3) !important;
+}
+
+.dropdown-btn.activo {
+    background: linear-gradient(135deg, var(--color-primario), var(--color-secundario)) !important;
+}
+
+/* ============================================
+   RESPONSIVE PARA MÓVIL
+   ============================================ */
+
+@media (max-width: 768px) {
+    nav.tab-container {
+        flex-wrap: wrap; /* Permite que los botones bajen */
+        gap: 0.5rem;
+        padding: 1rem;
+    }
+
     .dropdown {
-        width: 100%;
+        width: auto;
     }
     
     .dropdown-content {
-        position: static;
+        position: absolute; /* Mantiene posición absoluta */
+        width: 200px;
+        left: 0;
+        right: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    nav.tab-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .boton-redirect {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .dropdown {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .dropdown-content {
+        position: static; /* En móvil va debajo */
         width: 100%;
         margin-top: 8px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);

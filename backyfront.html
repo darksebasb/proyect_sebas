@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name = "description" content="Podremos evidenciar por medio de esta pagina web los diferentes conceptos basicos para poder empezar a crear una pagina web desde cero">
+    <title>HTML - Introducción</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="tab-container">
+        <button id="btnHtml" class="boton-redirect" onClick="actionRedirect('index.html');">
+            HTML
+        </button>
+        <button id="btnCss" class="boton-redirect" onClick="actionRedirect('css.html');">
+            CSS
+        </button>
+        <button id="btnJavaScript" class="boton-redirect" onClick="actionRedirect('javascript.html');">
+            JavaScript
+        </button>
+        <button id="btnGit" class="boton-redirect" onClick="actionRedirect('git.html');">
+            Git
+        </button>
+        <button id="btnGitHub" class="boton-redirect" onClick="actionRedirect('github.html');">
+            GitHub
+        </button>
+        <button id="btnGitLab" class="boton-redirect" onClick="actionRedirect('gitlab.html');">
+            GitLab
+        </button>
+        <button id="btnalojamiento" class="boton-redirect" onClick="actionRedirect('alojamientoWeb.html')">
+            Alojamiento Web
+        </button>
+
+        <!-- Botón Programación con Submenú -->
+        <div class="dropdown">
+            <button id="btnprogramacion" class="boton-redirect dropdown-btn" onclick="toggleDropdown(event)">
+                Programación ▼
+            </button>
+            <div class="dropdown-content" id="submenuProgramacion">
+                <ul>
+                    <a href="estructuras-datos.html">Estructura de datos</a>
+                    <a href="ciclos.html">Ciclos</a>
+                    <a href="condicionales.html">Condicionales</a>
+                    <a href="typescript.html">typescript</a>
+                    <a href="freemworks.html">Freemwoks</a>
+                    <a href="backyfront.html">back_y_front</a>
+                    <a href="endpoint.html">Endpoint</a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main id="" class="tabcontent">
+        <img src="https://mimoriarty.wordpress.com/wp-content/uploads/2014/07/front-end-vs-back-end.jpg" 
+        alt="logo">
+        <h2>¿Cual es la diferencia entre back y front?</h2>
+        <p>Imagina que vas a un restaurante. Esa es la mejor forma de entender la diferencia entre el Frontend y el Backend:</p>
+
+        <h3>El Frontend (La zona del comedor)</h3>
+        <p>Es todo lo que tú ves y con lo que interactúas.</p>
+        <ul>
+            <li>En el restaurante: Son las mesas decoradas, la carta con fotos de la comida, las luces, las sillas cómodas y el camarero que te sonríe.</li>
+            <li>En una página web: Son los colores, los botones que cambias de color al pasar el ratón, las imágenes, el tipo de letra y dónde están puestos los menús.</li>
+            <li> <strong>¿Qué se usa aquí?</strong> Principalmente lenguajes como HTML, CSS y JavaScript (o sus mejoras como TypeScript y frameworks como React).</li>
+        </ul>
+
+        <h3>El Backend (La cocina)</h3>
+        <p>Es todo lo que pasa detrás de escena para que el servicio funcione, pero que tú nunca ves directamente.</p>
+        <ul>
+            <li>
+                En el restaurante: Es donde los cocineros preparan la comida, donde está la despensa con los ingredientes (la base de datos), 
+                donde se lavan los platos y donde el administrador lleva las cuentas de cuánto dinero entró.
+            </li>
+            <li>
+                En una página web: Es el servidor que guarda tu contraseña de forma segura, el que decide si tienes permiso para ver una foto privada
+                o el que procesa el pago cuando compras algo.
+            </li>
+            <li> <strong>¿Qué se usa aquí?</strong> Lenguajes como Python, Java, PHP o Node.js (que usa JavaScript en el servidor).</li>
+        </ul>
+
+    </main>
+    <!-- FOOTER - Derechos reservados -->
+    <footer>
+        <p>2026 Yosef. Todos los derechos reservados.</p>
+    </footer>
+    <script src="scrip.js"></script> 
+</body>
+</html>

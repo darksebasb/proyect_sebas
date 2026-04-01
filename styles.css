@@ -460,10 +460,10 @@ footer p::before {
     box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
 }
 
-/* Para el dropdown cuando está en una subpágina */
-.dropdown-btn.pagina-activa {
-    background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
-    color: var(--color-blanco);
+/* Para el botón de dropdown cuando está activo como página */
+.dropdown-btn.activo {
+    background: linear-gradient(135deg, var(--color-primario), var(--color-secundario)) !important;
+    color: var(--color-blanco) !important;
 }
 
 /* ============================================

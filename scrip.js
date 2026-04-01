@@ -10,12 +10,24 @@ function actionRedirect(page) {
 // ============================================
 document.addEventListener('DOMContentLoaded', function() {
     
-    const paginaActual = window.location.pathname.split('/').pop() || 'index.html';
+    // Obtener nombre de archivo de múltiples formas posibles
+    let paginaActual = window.location.pathname.split('/').pop();
     
-    // Mapeo de páginas a IDs de botones
+    // Si está vacío (estamos en raíz), usar index.html
+    if (!paginaActual || paginaActual === '') {
+        paginaActual = 'index.html';
+    }
+    
+    // Si no tiene extensión .html, agregarla (por si acaso)
+    if (!paginaActual.includes('.') && paginaActual !== '') {
+        paginaActual += '.html';
+    }
+    
+    console.log('Página detectada:', paginaActual); // Para debugging
+    
+    // Mapeo completo de páginas a IDs de botones
     const mapaPaginas = {
         'index.html': 'btnHtml',
-        '': 'btnHtml',
         'css.html': 'btnCss',
         'javascript.html': 'btnJavaScript',
         'git.html': 'btnGit',
@@ -23,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'gitlab.html': 'btnGitLab',
         'typescript.html': 'btntypescript',
         'alojamientoWeb.html': 'btnalojamiento',
+        'alojamientoweb.html': 'btnalojamiento', // por si es minúscula
         
         // Subpáginas de Programación
         'estructuras-datos.html': 'btnprogramacion',
@@ -32,13 +45,19 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const idBotonActivo = mapaPaginas[paginaActual];
     
+    console.log('ID del botón:', idBotonActivo); // Para debugging
+    
     if (idBotonActivo) {
         const botonActivo = document.getElementById(idBotonActivo);
         if (botonActivo) {
-            // REMOVER cualquier clase 'activo' existente primero
-            botonActivo.classList.remove('activo');
-            // Agregar clase específica para página activa
-            botonActivo.classList.add('nav-activo');
+            // Remover clase activo de todos los botones primero
+            document.querySelectorAll('.boton-redirect').forEach(btn => {
+                btn.classList.remove('activo');
+            });
+            
+            // Agregar clase activo al botón actual
+            botonActivo.classList.add('activo');
+            console.log('Botón activado:', botonActivo.textContent);
         }
     }
     
@@ -77,13 +96,11 @@ function toggleDropdown(event) {
     
     const estaAbierto = dropdown.classList.contains('show');
     
-    // Cerrar todos los dropdowns primero
     cerrarTodosDropdowns();
     
     if (!estaAbierto) {
         dropdown.classList.add('show');
-        // Usar clase diferente: 'menu-abierto' en lugar de 'activo'
-        boton.classList.add('menu-abierto');
+        boton.classList.add('dropdown-abierto');
     }
 }
 
@@ -92,8 +109,7 @@ function cerrarTodosDropdowns() {
         menu.classList.remove('show');
     });
     document.querySelectorAll('.dropdown-btn').forEach(btn => {
-        // Quitar solo 'menu-abierto', NUNCA 'nav-activo'
-        btn.classList.remove('menu-abierto');
+        btn.classList.remove('dropdown-abierto');
     });
 }
 

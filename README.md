@@ -27,9 +27,25 @@ MEGA TAREA: (Terminar para el 25 de abril) html trainer
 2. crear y subir el proyecto a un repositorio.
 3. Desplegar el repositorio.
 opcional: mira si se puede enlazar con git hub
+importante: 
+info actualizada
+diseño nivelprofesional (Mirar videos de ejemplos y que pueda implementar lo aprendido y que pueda aprender algo nuevo)
 
 
 TAREAS 1 ABRIL:
 1. CREAR UN GLOSARIO CON LAS PALAABRAS QUE NO ENTIENDE O ACRONIMOS
 2. REPETIR TAREA 1 DEL 21 MARZO 
 3.CAMILO DEBE DE EXPLICARME DE FORMA GRAFICA EN EXALIDRAW EL TEMA DE LOS PASOS DE RAMAS ENTRE DESARROLLO Y PRODUCCION EN UN PROYECTO REAL (11 DE ABRIL)
+4.Corregir errores ortograficos
+5. Buscar tipos de base de datos y de cada tipo, indicar 2 provedores de bases de datos mas usados
+6. Que es un ORM
+7. En base de datos que data firts  y code firts
+8. que es un DTO y una entidad y en que se diferencia
+9. Que es y cuales son los metodos "http" para la requets de un endpoint
+10.Cree componentes para reutilizarlos
+11.Reorganizar el nav entre programacion bases de datos, repositorios  y glosarios  (Agregar documento vacio de IA)
+12. Que es un SP (BBDD)
+13. consumir una API publica (solo consumir un endpoint de consulta)
+nota: usar fech no axios 
+
+14. Se dejara el nuevo proyecto con el login (to do)

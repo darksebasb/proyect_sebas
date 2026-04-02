@@ -14,10 +14,10 @@ Y por último condicionales
 21 MARZO 
 TAREA: (TODO LO DE INVESTIGACION DEBE DE LLEVAR "QUE ES, PARA QUE SIRVE, CUANDO SE USA "Y ENTENDER LOS CONCEPTOS)
 1. Revisar todos los conceptos y si los entiende dejarlos como estan, sino profundisarlos de tal manera que usted los entienda y actualizar en la documentacion.
-2. buscar typescript - check 
-3. buscar freemworks - check 
+2. buscar typescript - check
+3. buscar freemworks - check
 4. Cual es la diferencia entre back y front - check
-5. buscar endpoint
+5. buscar endpoint  check
 6.En el repositorio crear una rama que se llame desarrollo y sera la rama que se utilizara localmente
 NOTA: RECORDARLE A CAMILO QUE HAY QUE HACER MERGE O PULL REQUEST
 
@@ -27,3 +27,9 @@ MEGA TAREA: (Terminar para el 25 de abril) html trainer
 2. crear y subir el proyecto a un repositorio.
 3. Desplegar el repositorio.
 opcional: mira si se puede enlazar con git hub
+
+
+TAREAS 1 ABRIL:
+1. CREAR UN GLOSARIO CON LAS PALAABRAS QUE NO ENTIENDE O ACRONIMOS
+2. REPETIR TAREA 1 DEL 21 MARZO 
+3. 

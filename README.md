@@ -27,3 +27,9 @@ MEGA TAREA: (Terminar para el 25 de abril) html trainer
 2. crear y subir el proyecto a un repositorio.
 3. Desplegar el repositorio.
 opcional: mira si se puede enlazar con git hub
+
+
+TAREAS 1 ABRIL:
+1. CREAR UN GLOSARIO CON LAS PALAABRAS QUE NO ENTIENDE O ACRONIMOS
+2. REPETIR TAREA 1 DEL 21 MARZO 
+3. 

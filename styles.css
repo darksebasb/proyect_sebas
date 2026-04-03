@@ -42,6 +42,7 @@ nav.tab-container {
   z-index: 100;
 }
 
+/* ESTILO BASE para TODOS los botones - Fondo blanco */
 .boton-redirect {
   background: var(--color-blanco);
   color: var(--color-primario);
@@ -62,10 +63,11 @@ nav.tab-container {
   box-shadow: var(--sombra-hover);
 }
 
-/* CLASE PARA BOTÓN ACTIVO - Se agrega dinámicamente con JS */
+/* SOLO cuando tiene clase .activo - Fondo morado */
 .boton-redirect.activo {
-  background: var(--color-primario);
-  color: var(--color-blanco);
+  background: var(--color-primario) !important;
+  color: var(--color-blanco) !important;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3) !important;
 }
 
 /* ============================================
@@ -91,6 +93,7 @@ main.tabcontent img {
   display: block;
   box-shadow: var(--sombra-suave);
 }
+
 /* ============================================
    TABLA ESTILIZADA
    ============================================ */
@@ -146,7 +149,6 @@ main.tabcontent img {
 /* ============================================
    ACORDEÓN - BOTONES DESPLEGABLES
    ============================================ */
-
 .acordeon-item {
     margin-bottom: 1rem;
     border-radius: 12px;
@@ -240,7 +242,6 @@ main.tabcontent img {
     }
 }
 
-
 /* ============================================
    TIPOGRAFÍA MODERNA
    ============================================ */
@@ -296,7 +297,6 @@ li strong {
   font-weight: 600;
 }
 
-
 /* ============================================
    RESPONSIVE (MÓVIL)
    ============================================ */
@@ -324,8 +324,8 @@ li strong {
    FOOTER - DERECHOS RESERVADOS
    ============================================ */
 footer {
-  background: rgba(30, 41, 59, 0.95);  /* Color oscuro */
-  color: #94a3b8;  /* Gris claro */
+  background: rgba(30, 41, 59, 0.95);
+  color: #94a3b8;
   text-align: center;
   padding: 2rem;
   margin-top: 3rem;
@@ -337,34 +337,49 @@ footer p {
   color: #94a3b8;
 }
 
-/* Símbolo de copyright más grande */
 footer p::before {
   content: "©";
   margin-right: 5px;
   font-size: 1.1rem;
 }
-/* ============================================
-   DROPDOWN/SUBMENÚ - PROGRAMACIÓN
-   ============================================ */
 
+/* ============================================
+   DROPDOWN/SUBMENÚ - CORREGIDO
+   ============================================ */
 .dropdown {
     position: relative;
     display: inline-block;
 }
 
+/* DROPDOWN BTN - Igual que botón normal, SIN gradiente morado fijo */
 .dropdown-btn {
-    background: linear-gradient(135deg, var(--color-secundario), #a855f7);
-    color: var(--color-blanco);
+    background: var(--color-blanco) !important;
+    color: var(--color-primario) !important;
     border: 2px solid transparent;
 }
 
 .dropdown-btn:hover {
-    background: linear-gradient(135deg, #7c4fe0, #9333ea);
+    background: var(--color-primario) !important;
+    color: var(--color-blanco) !important;
     transform: translateY(-2px);
     box-shadow: var(--sombra-hover);
 }
 
-/* Contenido del submenú - POSICIÓN CORREGIDA */
+/* DROPDOWN BTN ACTIVO (página actual) - Morado */
+.dropdown-btn.activo {
+    background: var(--color-primario) !important;
+    color: var(--color-blanco) !important;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3) !important;
+}
+
+/* DROPDOWN ABIERTO (estado temporal al hacer clic) - Morado oscuro */
+.dropdown-btn.dropdown-abierto {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed) !important;
+    color: var(--color-blanco) !important;
+    transform: translateY(-2px);
+}
+
+/* Contenido del submenú */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -373,25 +388,24 @@ footer p::before {
     border-radius: var(--radio-bordes);
     box-shadow: var(--sombra-hover);
     z-index: 1000;
-    top: 100%; /* Justo debajo del botón */
+    top: 100%;
     left: 0;
-    margin-top: 8px; /* Espacio entre botón y menú */
+    margin-top: 8px;
     overflow: hidden;
     animation: fadeIn 0.3s ease;
 }
 
-/* Mostrar submenú */
 .dropdown-content.show {
     display: block;
 }
 
-/* Items del submenú - ESTILOS CORREGIDOS */
+/* Items del submenú */
 .dropdown-content ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    flex-direction: column; /* Vertical */
+    flex-direction: column;
 }
 
 .dropdown-content a {
@@ -404,7 +418,7 @@ footer p::before {
     border-bottom: 1px solid #e2e8f0;
     transition: all 0.3s ease;
     background: var(--color-blanco);
-    white-space: nowrap; /* Evita que el texto se parta */
+    white-space: nowrap;
 }
 
 .dropdown-content a:last-child {
@@ -429,32 +443,12 @@ footer p::before {
     }
 }
 
-/* Flecha rotada cuando está activo */
-.dropdown-btn.dropdown-abierto {
-    background: linear-gradient(135deg, #4f46e5, #7c3aed);
-}
-
 /* ============================================
-   BOTÓN ACTIVO EN NAVEGACIÓN
+   RESPONSIVE PARA MÓVIL - DROPDOWN
    ============================================ */
-
-.boton-redirect.activo {
-    background: var(--color-primario) !important;
-    color: var(--color-blanco) !important;
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3) !important;
-}
-
-.dropdown-btn.activo {
-    background: linear-gradient(135deg, var(--color-primario), var(--color-secundario)) !important;
-}
-
-/* ============================================
-   RESPONSIVE PARA MÓVIL
-   ============================================ */
-
 @media (max-width: 768px) {
     nav.tab-container {
-        flex-wrap: wrap; /* Permite que los botones bajen */
+        flex-wrap: wrap;
         gap: 0.5rem;
         padding: 1rem;
     }
@@ -464,7 +458,7 @@ footer p::before {
     }
     
     .dropdown-content {
-        position: absolute; /* Mantiene posición absoluta */
+        position: absolute;
         width: 200px;
         left: 0;
         right: auto;
@@ -488,35 +482,220 @@ footer p::before {
     }
     
     .dropdown-content {
-        position: static; /* En móvil va debajo */
+        position: static;
         width: 100%;
         margin-top: 8px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 }
-/* ============================================
-   BOTÓN DE PÁGINA ACTIVA (Navegación)
-   ============================================ */
 
-/* Estilo para indicar en qué página estás actualmente */
-.boton-redirect.pagina-activa {
-    background: var(--color-primario);
-    color: var(--color-blanco);
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+/* ============================================
+   MODO OSCURO - VARIABLES
+   ============================================ */
+.modo-oscuro {
+  --color-primario: #818cf8;
+  --color-secundario: #a78bfa;
+  --color-fondo: #0f172a;
+  --color-texto: #f1f5f9;
+  --color-blanco: #1e293b;
+  --sombra-suave: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+  --sombra-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
 }
 
-/* Para el botón de dropdown cuando está activo como página */
-.dropdown-btn.activo {
+/* Ajustes específicos para modo oscuro */
+.modo-oscuro body {
+  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+}
+
+.modo-oscuro main.tabcontent {
+  background: #1e293b;
+  color: var(--color-texto);
+}
+
+.modo-oscuro .table {
+  background: #1e293b;
+}
+
+.modo-oscuro .table td {
+  color: #cbd5e1;
+  border-bottom: 1px solid #334155;
+}
+
+.modo-oscuro .table tbody tr:hover {
+  background-color: #334155;
+}
+
+.modo-oscuro li {
+  background: #334155;
+  color: #e2e8f0;
+}
+
+.modo-oscuro li:hover {
+  background: #475569;
+}
+
+.modo-oscuro p {
+  color: #94a3b8;
+}
+
+.modo-oscuro .acordeon-contenido {
+  background: #1e293b;
+}
+
+.modo-oscuro .acordeon-contenido li {
+  background: #334155;
+  color: #e2e8f0;
+}
+
+.modo-oscuro .acordeon-contenido li:hover {
+  background: #475569;
+}
+
+.modo-oscuro .dropdown-content {
+  background: #1e293b;
+}
+
+.modo-oscuro .dropdown-content a {
+  background: #1e293b;
+  color: #e2e8f0;
+  border-bottom: 1px solid #334155;
+}
+
+.modo-oscuro .dropdown-content a:hover {
+  color: var(--color-blanco);
+}
+
+/* ============================================
+   BOTÓN TOGGLE MODO OSCURO
+   ============================================ */
+.toggle-modo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
+  color: white;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.toggle-modo:hover {
+  transform: scale(1.1) rotate(15deg);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.6);
+}
+
+.modo-oscuro .toggle-modo {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  box-shadow: 0 4px 15px rgba(251, 191, 36, 0.4);
+}
+
+/* ============================================
+   SUBITEM ACTIVO EN DROPDOWN - NUEVO
+   ============================================ */
+
+.dropdown-content a.activo {
     background: linear-gradient(135deg, var(--color-primario), var(--color-secundario)) !important;
     color: var(--color-blanco) !important;
+    font-weight: 600 !important;
+    padding-left: 25px !important;
+    border-left: 4px solid white;
 }
 
 /* ============================================
-   DROPDOWN ABIERTO (Estado temporal)
+   MENÚ HAMBURGUESA - SOLO MÓVIL
    ============================================ */
 
-/* Solo cuando el dropdown está desplegado */
-.dropdown-btn.dropdown-abierto {
-    background: linear-gradient(135deg, #4f46e5, #7c3aed);
-    transform: translateY(-2px);
+/* Botón hamburguesa - oculto en escritorio */
+.menu-toggle {
+  display: none;
+}
+
+/* Overlay - oculto en escritorio */
+.menu-overlay {
+  display: none;
+}
+
+/* ============================================
+   SOLO EN MÓVIL (< 768px)
+   ============================================ */
+@media (max-width: 768px) {
+  /* Mostrar botón hamburguesa */
+  .menu-toggle {
+    display: block;
+    background: var(--color-primario);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1001;
+    box-shadow: var(--sombra-hover);
+  }
+  
+  /* Ocultar menú por defecto (fuera de pantalla) */
+  nav.tab-container {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 5rem 1rem 2rem;
+    gap: 0.8rem;
+    transition: right 0.3s ease;
+    box-shadow: -5px 0 20px rgba(0,0,0,0.3);
+    overflow-y: auto;
+  }
+  
+  /* Menú abierto */
+  nav.tab-container.abierto {
+    right: 0;
+  }
+  
+  /* Botones en móvil */
+  .boton-redirect {
+    width: 100%;
+    margin: 0;
+    text-align: left;
+    padding: 14px 20px;
+    border-radius: 12px;
+  }
+  
+  /* Dropdowns en móvil */
+  .dropdown {
+    width: 100%;
+  }
+  
+  .dropdown-content {
+    position: static;
+    width: 100%;
+    margin-top: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+  }
+  
+  /* Overlay oscuro */
+  .menu-overlay.activo {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 99;
+  }
 }

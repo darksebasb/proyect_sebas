@@ -33,11 +33,12 @@ diseño nivelprofesional (Mirar videos de ejemplos y que pueda implementar lo ap
 
 
 TAREAS 1 ABRIL:
+(TODO LO DE INVESTIGACION DEBE DE LLEVAR "QUE ES, PARA QUE SIRVE, CUANDO SE USA "Y ENTENDER LOS CONCEPTOS)
 1. CREAR UN GLOSARIO CON LAS PALAABRAS QUE NO ENTIENDE O ACRONIMOS
 2. REPETIR TAREA 1 DEL 21 MARZO 
 3.CAMILO DEBE DE EXPLICARME DE FORMA GRAFICA EN EXALIDRAW EL TEMA DE LOS PASOS DE RAMAS ENTRE DESARROLLO Y PRODUCCION EN UN PROYECTO REAL (11 DE ABRIL)
 4.Corregir errores ortograficos
-5. Buscar tipos de base de datos y de cada tipo, indicar 2 provedores de bases de datos mas usados
+5. Buscar tipos de base de datos y de cada tipo, indicar 2 provedores de bases de datos mas usados -  check 
 6. Que es un ORM
 7. En base de datos que data firts  y code firts
 8. que es un DTO y una entidad y en que se diferencia

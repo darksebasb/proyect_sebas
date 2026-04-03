@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base de datos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="tabcontent">
+        <h2>¿Que es una base de datos?</h2>
+        <p>es un software informático que permite almacenar grandes cantidades de información, de una forma organizada y accesible para su futuro uso</p>
+
+        <h3>¿Para que sire una base de datos?</h3>
+        <p>
+            sirve para almacenar, organizar, gestionar y recuperar grandes volúmenes de información de forma estructurada, rápida y segura
+        </p>
+
+        <h3>¿En que casos se usan las bases de datos?</h3>
+        <h3>Tipos de bases de datos</h3>
+        <p>
+            Son fundamentales en casi todos los sectores modernos para gestionar inventarios, realizar transacciones bancarias, gestionar clientes (CRM), almacenar historias clínicas
+            y en el desarrollo de aplicaciones web y videojuegos.
+            Principales Casos de Uso de las Bases de Datos:
+        </p>
+        <!-- EN CADA TIPO DE BBDD RELACIONAR DOS EJEMPLOS-->
+        <!-- ACORDEÓN 1: Proyectos de gran escala y equipos grandes -->
+        <div class="acordeon-item">
+            <button class="acordeon-boton" onclick="toggleAcordeon('bases')">
+                1. Bases de Datos Relacionales (SQL)
+                <span class="flecha">▼</span>
+            </button>
+            <div id="bases" class="acordeon-contenido">
+                <p>
+                    Son como tablas de Excel que se relacionan entre sí. Usan filas y columnas, y todo se organiza de forma estructurada.
+
+                </p>
+                <h3>Los provedores mas usados son:</h3>
+                <ul>
+                    <li>MySQL</li>
+                    <li>PostgreSQL</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="acordeon-item">
+            <button class="acordeon-boton" onclick="toggleAcordeon('noSQL')">
+                2. Bases de Datos NoSQL (No Relacionales)
+                <span class="flecha">▼</span>
+            </button>
+            <div id="noSQL" class="acordeon-contenido">
+                <p>
+                    No usan tablas rígidas. Son más flexibles y permiten guardar datos de formas variadas (documentos, grafos, etc.)
+                </p>
+                <h3>Los provedores mas usados son:</h3>
+                <ul>
+                    <li>MongoDB</li>
+                    <li>Redis</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="acordeon-item">
+            <button class="acordeon-boton" onclick="toggleAcordeon('icloud')">
+                3. Bases de Datos en la Nube (Cloud)
+                <span class="flecha">▼</span>
+            </button>
+            <div id="icloud" class="acordeon-contenido">
+                <p>
+                    Son servicios que administran todo por ti. No necesitas instalar nada en tu computadora.
+                </p>
+                <h3>Los provedores mas usados son:</h3>
+                <ul>
+                    <li>Amazon Web Services (AWS)</li>
+                    <li>Google Cloud</li>
+                </ul>
+
+            </div>
+
+        </div>
+    </main>
+    <script src="scrip.js"></script>
+</body>
+</html>

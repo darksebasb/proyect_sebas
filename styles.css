@@ -699,3 +699,39 @@ footer p::before {
     z-index: 99;
   }
 }
+
+/* ============================================
+   CSS ADICIONAL MÍNIMO PARA SUBMENÚS
+   ============================================ */
+
+/* En DESKTOP: submenú a la derecha */
+@media (min-width: 769px) {
+    .dropdown-content .dropdown-content {
+        position: absolute;
+        left: 100%;
+        top: 0;
+        margin-left: 2px;
+        min-width: 200px;
+        display: none;
+    }
+    
+    .dropdown-content .dropdown-content.show {
+        display: block;
+    }
+}
+
+/* En MÓVIL: submenú debajo */
+@media (max-width: 768px) {
+    .dropdown-content .dropdown-content {
+        position: static;
+        width: 100%;
+        margin-left: 15px;
+        border-left: 3px solid var(--color-primario);
+        display: none;
+    }
+    
+    .dropdown-content .dropdown-content.show {
+        display: block;
+    }
+}
+

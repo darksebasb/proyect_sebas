@@ -3,32 +3,63 @@
 // ============================================
 
 const menuConfig = [
-    { id: 'btnalojamiento', texto: 'Alojamiento Web', url: 'alojamientoWeb.html' },
+    { 
+        id: 'btnalojamiento', 
+        texto: 'Alojamiento Web', 
+        url: 'alojamientoWeb.html' 
+    },
     { 
         id: 'btnprogramacion', 
         texto: 'Programación ▼', 
         url: '#',
         dropdown: true,
         subitems: [
-            { texto: 'HTML', url: 'index.html' },
-            { texto: 'CSS', url: 'css.html' },
-            { texto: 'JavaScript', url: 'javascript.html' },
-            { texto: 'Estructura de datos', url: 'estructuras-datos.html' },
-            { texto: 'Ciclos', url: 'ciclos.html' },
-            { texto: 'Condicionales', url: 'condicionales.html' },
-            { texto: 'TypeScript', url: 'typescript.html' },
-            { texto: 'Frameworks', url: 'frameworks.html' },
-            { texto: 'Back y Front', url: 'backyfront.html' },
-            { texto: 'Endpoint', url: 'endpoint.html' },
+            {
+                id: 'btnfrontend',
+                texto: 'Frontend ▼',
+                url: '#',
+                dropdown: true,
+                subitems: [
+                    { texto: 'HTML', url: 'index.html' },
+                    { texto: 'CSS', url: 'css.html' },
+                    { texto: 'JavaScript', url: 'javascript.html' },
+                ]
+            },
+            {
+                id: 'btnbackend',
+                texto: 'Backend ▼',
+                url: '#',
+                dropdown: true,
+                subitems: [
+                    { texto: 'Estructura de datos', url: 'estructuras-datos.html' },
+                    { texto: 'Ciclos', url: 'ciclos.html' },
+                    { texto: 'Condicionales', url: 'condicionales.html' },
+                    { texto: 'TypeScript', url: 'typescript.html' },
+                    { texto: 'Endpoint', url: 'endpoint.html' },
+                    { texto: 'http', url: 'http.html' }
+                ]
+            },
+            {
+                 id: 'btnfullstack',
+                texto: 'Fullstack ▼',
+                url: '#',
+                dropdown: true,
+                subitems: [
+                    { texto: 'Frameworks', url: 'frameworks.html' },
+                    { texto: 'Back y Front', url: 'backyfront.html' }
+                ]
+            },
+
         ]
-    },
+    },  // ← FALTABA ESTA COMA
     {
         id: 'btnbasesdedatos',
         texto: 'Bases de datos ▼',
         url: '#',
         dropdown: true,
         subitems: [
-            {texto: 'Base de datos', url: 'base_de_datos.html'}
+            { texto: 'Base de datos', url: 'base_de_datos.html' },
+            { texto: 'ORM', url: 'orm.html' }
         ]
     },
     { 
@@ -37,13 +68,12 @@ const menuConfig = [
         url: '#',
         dropdown: true,
         subitems: [
-            {texto: 'Git', url: 'git.html'},
-            {texto: 'GitHub', url: 'github.html'},
-            {texto: 'GitLab', url: 'gitlab.html'}
+            { texto: 'Git', url: 'git.html' },
+            { texto: 'GitHub', url: 'github.html' },
+            { texto: 'GitLab', url: 'gitlab.html' }
         ]
     },
 ];
-
 // ============================================
 // REDIRECCIÓN ENTRE PÁGINAS
 // ============================================
@@ -319,3 +349,4 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+

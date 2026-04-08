@@ -15,7 +15,7 @@ Y por último condicionales
 TAREA: (TODO LO DE INVESTIGACION DEBE DE LLEVAR "QUE ES, PARA QUE SIRVE, CUANDO SE USA "Y ENTENDER LOS CONCEPTOS)
 1. Revisar todos los conceptos y si los entiende dejarlos como estan, sino profundisarlos de tal manera que usted los entienda y actualizar en la documentacion.
 2. buscar typescript - check
-3. buscar freemworks - check
+3. buscar frameworks - check
 4. Cual es la diferencia entre back y front - check
 5. buscar endpoint  check
 6.En el repositorio crear una rama que se llame desarrollo y sera la rama que se utilizara localmente
@@ -36,15 +36,15 @@ TAREAS 1 ABRIL:
 (TODO LO DE INVESTIGACION DEBE DE LLEVAR "QUE ES, PARA QUE SIRVE, CUANDO SE USA "Y ENTENDER LOS CONCEPTOS)
 1. CREAR UN GLOSARIO CON LAS PALAABRAS QUE NO ENTIENDE O ACRONIMOS
 2. REPETIR TAREA 1 DEL 21 MARZO 
-3.CAMILO DEBE DE EXPLICARME DE FORMA GRAFICA EN EXALIDRAW EL TEMA DE LOS PASOS DE RAMAS ENTRE DESARROLLO Y PRODUCCION EN UN PROYECTO REAL (11 DE ABRIL)
-4.Corregir errores ortograficos
-5. Buscar tipos de base de datos y de cada tipo, indicar 2 provedores de bases de datos mas usados -  check 
-6. Que es un ORM
-7. En base de datos que data firts  y code firts
-8. que es un DTO y una entidad y en que se diferencia
-9. Que es y cuales son los metodos "http" para la requets de un endpoint
+3.CAMILO DEBE DE EXPLICARME DE FORMA GRÁFICA EN EXALTARA EL TEMA DE LOS PASOS DE RAMAS ENTRE DESARROLLO Y PRODUCTION EN UN PROYECTO REAL (11 DE ABRIL)
+4.Corregir errores ortográficos - CHECK
+5. Buscar tipos de base de datos y de cada tipo, indicar 2 proveedores de bases de datos mas usados -  CHECK
+6. Que es un ORM- CHECK
+7. En base de datos que data first  y code first - check 
+8. que es un DTO y una entidad y en que se diferencia - check 
+9. Que es y cuales son los métodos "http" para la request de un endpoint-
 10.Cree componentes para reutilizarlos
-11.Reorganizar el nav entre programacion bases de datos, repositorios  y glosarios  (Agregar documento vacio de IA)
+11.Reorganizar el nav entre programación bases de datos, repositorios  y glosarios  (Agregar documento vació de IA)
 12. Que es un SP (BBDD)
 13. consumir una API publica (solo consumir un endpoint de consulta)
 nota: usar fech no axios 

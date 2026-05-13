@@ -33,20 +33,20 @@ diseño nivelprofesional (Mirar videos de ejemplos y que pueda implementar lo ap
 
 
 TAREAS 1 ABRIL:
-(TODO LO DE INVESTIGACION DEBE DE LLEVAR "QUE ES, PARA QUE SIRVE, CUANDO SE USA "Y ENTENDER LOS CONCEPTOS)
-1. CREAR UN GLOSARIO CON LAS PALAABRAS QUE NO ENTIENDE O ACRONIMOS
-2. REPETIR TAREA 1 DEL 21 MARZO 
+(TODO LO DE INVESTIGACIÓN DEBE DE LLEVAR "QUE ES, PARA QUE SIRVE, CUANDO SE USA "Y ENTENDER LOS CONCEPTOS)
+1. CREAR UN GLOSARIO CON LAS PALABRAS QUE NO ENTIENDE O ACRÓNIMOS
+2. REPETIR TAREA 1 DEL 21 MARZO
 3.CAMILO DEBE DE EXPLICARME DE FORMA GRÁFICA EN EXALTARA EL TEMA DE LOS PASOS DE RAMAS ENTRE DESARROLLO Y PRODUCTION EN UN PROYECTO REAL (11 DE ABRIL)
 4.Corregir errores ortográficos - CHECK
 5. Buscar tipos de base de datos y de cada tipo, indicar 2 proveedores de bases de datos mas usados -  CHECK
 6. Que es un ORM- CHECK
-7. En base de datos que data first  y code first - check 
-8. que es un DTO y una entidad y en que se diferencia - check 
-9. Que es y cuales son los métodos "http" para la request de un endpoint-
-10.Cree componentes para reutilizarlos
+7. En base de datos que es data first  y code first - check
+8. que es un DTO y una entidad y en que se diferencia - check
+9. Que es y cuales son los métodos "http" para la request de un endpoint-check
+10.Cree componentes para reutilizarlos 
 11.Reorganizar el nav entre programación bases de datos, repositorios  y glosarios  (Agregar documento vació de IA)
 12. Que es un SP (BBDD)
 13. consumir una API publica (solo consumir un endpoint de consulta)
-nota: usar fech no axios 
+nota: usar fech no axios
 
 14. Se dejara el nuevo proyecto con el login (to do)

@@ -90,6 +90,79 @@
                 </ul>
             </div>
         </div>
+
+        <h3>¿Qué son los métodos HTTP?</h3>
+        <p>
+            son verbos que indican la acción que se desea realizar sobre un recurso en un servidor web y asi mismo se es entregada la información de regreso.
+        </p>
+
+        <h3>Métodos HTTP principales para requests:</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Método</th>
+                    <th>Descripción</th>
+                    <th>Id empotente</th>
+                    <th>Uso típico</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>GET</td>
+                    <td>Obtener/recuperar un recurso del servidor</td>
+                    <td>Sí</td>
+                    <td>Leer datos, cargar páginas, consultar información</td>
+                </tr>
+                <tr>
+                    <td>POST</td>
+                    <td>Enviar datos al servidor para crear un nuevo recurso</td>
+                    <td>No</td>
+                    <td>Enviar formularios, crear registros, subir archivos</td>
+                </tr>
+                <tr>
+                    <td>POST</td>
+                    <td>Enviar datos al servidor para crear un nuevo recurso</td>
+                    <td>No</td>
+                    <td>Enviar formularios, crear registros, subir archivos</td>
+                </tr>
+                <tr>
+                    <td>PUT</td>
+                    <td>Actualizar completamente un recurso existente</td>
+                    <td>Sí</td>
+                    <td>Reemplazar datos completos de un recurso</td>
+                </tr>
+                <tr>
+                    <td>PATCH</td>
+                    <td>Actualizar parcialmente un recurso existente</td>
+                    <td>No</td>
+                    <td>Modificar campos específicos sin alterar todo el recurso</td>
+                </tr>
+                <tr>
+                    <td>DELETE</td>
+                    <td>Eliminar un recurso del servidor</td>
+                    <td>Sí</td>
+                    <td>Borrar registros, eliminar archivos</td>
+                </tr>
+                <tr>
+                    <td>HEAD</td>
+                    <td>Obtener solo los headers (metadatos) de un recurso, sin el body</td>
+                    <td>Sí</td>
+                    <td>Verificar existencia, obtener metadatos (tamaño, fecha modificación)</td>
+                </tr>
+                <tr>
+                    <td>OPTIONS</td>
+                    <td>Obtener los métodos HTTP permitidos para un recurso</td>
+                    <td>Sí</td>
+                    <td>CORS preflight requests, descubrir capacidades del endpoint</td>
+                </tr>
+                <tr>
+                    <td>TRACE</td>
+                    <td>Depuración: devuelve la request recibida (eco)</td>
+                    <td>Sí</td>
+                    <td>Diagnóstico, debugging</td>
+                </tr>
+            </tbody>
+        </table>
     </main>
     <script src="scrip.js"></script>
 </body>

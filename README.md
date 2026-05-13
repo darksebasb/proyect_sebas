@@ -45,8 +45,8 @@ TAREAS 1 ABRIL:
 9. Que es y cuales son los métodos "http" para la request de un endpoint-check
 10.Cree componentes para reutilizarlos 
 11.Reorganizar el nav entre programación bases de datos, repositorios  y glosarios  (Agregar documento vació de IA)
-12. Que es un SP (BBDD)
-13. consumir una API publica (solo consumir un endpoint de consulta)
+12. Que es un SP (BBDD) - CHECK
+13. consumir una API publica (solo consumir un endpoint de consulta) CHECK
 nota: usar fech no axios
 
 14. Se dejara el nuevo proyecto con el login (to do)

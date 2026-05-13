@@ -31,7 +31,8 @@ const menuConfig = [
                     { texto: 'Condicionales', url: 'condicionales.html' },
                     { texto: 'TypeScript', url: 'typescript.html' },
                     { texto: 'Endpoint', url: 'endpoint.html' },
-                    { texto: 'http', url: 'http.html' }
+                    { texto: 'http', url: 'http.html' },
+                    { texto: 'API', url: 'api.html' }
                 ]
             },
             {
@@ -404,26 +405,93 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-// 1. Hacer la petición GET (consultar datos)
-fetch('https://jsonplaceholder.typicode.com/posts/1')
-  
-  // 2. Cuando la API responde, convertimos la respuesta a JSON
-  .then(response => {
-    // Verificamos que todo salió bien
-    if (!response.ok) {
-      throw new Error('Error en la petición: ' + response.status);
+// ============================================
+// CONSUMO DE API PÚBLICA CON FETCH
+// ============================================
+
+/**
+ * Función para consumir la API pública JSONPlaceholder
+ * Endpoint: /users - devuelve 10 usuarios de ejemplo
+ */
+function cargarUsuariosAPI() {
+    const contenedor = document.getElementById('contenedor-usuarios');
+    const estado = document.getElementById('estado-api');
+    const btnRecargar = document.getElementById('btn-recargar');
+    
+    // URL de la API pública (no requiere autenticación)
+    const urlAPI = 'https://jsonplaceholder.typicode.com/users';
+    
+    // 1. Hacer la petición GET con fetch
+    fetch(urlAPI)
+        
+        // 2. Verificar que la respuesta sea correcta
+        .then(response => {
+            if (!response.ok) {
+                // Si hay error HTTP (404, 500, etc.)
+                throw new Error(`Error HTTP: ${response.status} - ${response.statusText}`);
+            }
+            // Convertir la respuesta a JSON (objeto JavaScript)
+            return response.json();
+        })
+        
+        // 3. Usar los datos recibidos
+        .then(usuarios => {
+            // Ocultar mensaje de carga
+            estado.style.display = 'none';
+            
+            // Mostrar botón de recargar
+            btnRecargar.style.display = 'inline-block';
+            
+            // Limpiar contenedor
+            contenedor.innerHTML = '';
+            
+            // Recorrer cada usuario y crear una tarjeta
+            usuarios.forEach(usuario => {
+                const tarjeta = document.createElement('div');
+                tarjeta.className = 'tarjeta-usuario';
+                tarjeta.innerHTML = `
+                    <h4>👤 ${usuario.name}</h4>
+                    <p><strong>Usuario:</strong> @${usuario.username}</p>
+                    <p><strong>Email:</strong> ${usuario.email}</p>
+                    <p><strong>Teléfono:</strong> ${usuario.phone}</p>
+                    <p><strong>Ciudad:</strong> ${usuario.address.city}</p>
+                    <p><strong>Empresa:</strong> ${usuario.company.name}</p>
+                    <a href="https://${usuario.website}" target="_blank">🌐 ${usuario.website}</a>
+                `;
+                contenedor.appendChild(tarjeta);
+            });
+            
+            console.log('✅ Usuarios cargados correctamente:', usuarios);
+        })
+        
+        // 4. Capturar errores
+        .catch(error => {
+            estado.innerHTML = `❌ Error al cargar los datos: ${error.message}`;
+            estado.style.color = 'red';
+            console.error('Error en fetch:', error);
+            
+            // Mostrar botón para reintentar
+            btnRecargar.style.display = 'inline-block';
+            btnRecargar.textContent = '🔁 Reintentar';
+        });
+}
+
+// Evento para el botón de recargar
+document.addEventListener('DOMContentLoaded', function() {
+    // ... tu código existente ...
+    
+    // Agregar evento al botón de recargar API
+    const btnRecargar = document.getElementById('btn-recargar');
+    if (btnRecargar) {
+        btnRecargar.addEventListener('click', function() {
+            const estado = document.getElementById('estado-api');
+            estado.style.display = 'block';
+            estado.style.color = '';
+            estado.textContent = '🔄 Cargando usuarios desde la API...';
+            cargarUsuariosAPI();
+        });
     }
-    return response.json(); // Convertimos a objeto JavaScript
-  })
-  
-  // 3. Usamos los datos recibidos
-  .then(data => {
-    console.log('Datos recibidos:', data);
-    // data es un objeto JavaScript normal
-    console.log('Título:', data.title);
-  })
-  
-  // 4. Si algo falla, capturamos el error
-  .catch(error => {
-    console.error('Algo salió mal:', error);
-  });
+    
+    // Cargar usuarios al iniciar la página
+    cargarUsuariosAPI();
+});

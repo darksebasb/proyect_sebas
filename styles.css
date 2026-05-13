@@ -840,3 +840,187 @@ footer p::before {
         grid-template-columns: 1fr;
     }
 }
+
+
+/* ============================================
+   SUBMENÚS AL LADO DERECHO (CASCADA)
+   ============================================ */
+
+/* Submenú de segundo nivel: posicionado a la derecha */
+.subnav-lateral {
+    position: relative;
+}
+
+/* El contenido del submenú lateral aparece a la derecha */
+.subnav-content-lateral {
+    position: absolute;
+    top: 0;
+    left: 100%;        /* A la derecha del botón padre */
+    margin-left: 2px;  /* Pequeño espacio entre menús */
+    min-width: 180px;
+    z-index: 1000;
+    
+    /* Oculto por defecto */
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-10px);
+    transition: all 0.2s ease;
+}
+
+/* Mostrar al hacer hover o cuando tiene clase 'show' */
+.subnav-lateral:hover > .subnav-content-lateral,
+.subnav-content-lateral.show {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+/* En móvil: los submenús laterales deben aparecer debajo */
+@media (max-width: 768px) {
+    .subnav-content-lateral {
+        position: static;
+        left: auto;
+        margin-left: 0;
+        margin-top: 5px;
+        transform: none;
+        box-shadow: none;
+        border-left: 3px solid #6c5ce7;
+        padding-left: 15px;
+    }
+    
+    .subnav-lateral:hover > .subnav-content-lateral {
+        display: none;
+    }
+    
+    .subnav-content-lateral.show {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+    }
+}
+
+/* ============================================
+   SUBMENÚS ANIDADOS - BOTONES + POSICIONAMIENTO LATERAL
+   ============================================ */
+
+/* Contenedor del submenú anidado (Frontend, Backend, Fullstack) */
+.dropdown .dropdown {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+/* Botones de segundo nivel (Frontend, Backend, Fullstack) 
+   Mismo estilo visual que los links finales */
+.dropdown-content .dropdown .dropdown-btn {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    color: var(--color-texto);
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-bottom: 1px solid #e2e8f0;
+    border-radius: 0;
+    transition: all 0.3s ease;
+    background: var(--color-blanco);
+    white-space: nowrap;
+    text-align: left;
+    border: none;
+    border-bottom: 1px solid #e2e8f0;
+    cursor: pointer;
+    font-family: inherit;
+    position: relative;
+}
+
+/* Quitar borde inferior al último */
+.dropdown-content .dropdown:last-child .dropdown-btn {
+    border-bottom: none;
+}
+
+/* Hover igual que los links */
+.dropdown-content .dropdown .dropdown-btn:hover {
+    background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
+    color: var(--color-blanco);
+    padding-left: 25px;
+}
+
+/* Estado activo/abierto */
+.dropdown-content .dropdown .dropdown-btn.activo,
+.dropdown-content .dropdown .dropdown-btn.dropdown-abierto {
+    background: linear-gradient(135deg, var(--color-primario), var(--color-secundario)) !important;
+    color: var(--color-blanco) !important;
+    padding-left: 25px;
+}
+
+/* ============================================
+   SUBMENÚ LATERAL A LA DERECHA - DESKTOP
+   ============================================ */
+
+/* El submenú que se abre a la derecha (HTML, CSS, JS) */
+.dropdown .dropdown .dropdown-content {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    margin-top: 0;
+    margin-left: 5px;
+    min-width: 220px;
+    background: var(--color-blanco);
+    border-radius: var(--radio-bordes);
+    box-shadow: var(--sombra-hover);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    display: block; /* Importante: siempre display block */
+}
+
+/* Mostrar submenú lateral cuando tiene clase 'show' */
+.dropdown .dropdown .dropdown-content.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Hover también abre el submenú lateral en desktop */
+@media (min-width: 769px) {
+    .dropdown .dropdown:hover > .dropdown-content {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/* ============================================
+   LINKS FINALES (HTML, CSS, JS) - ESTILO ORIGINAL
+   ============================================ */
+
+.dropdown-content a {
+    display: block;
+    padding: 12px 20px;
+    color: var(--color-texto);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-bottom: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+    background: var(--color-blanco);
+    white-space: nowrap;
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a:hover {
+    background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
+    color: var(--color-blanco);
+    padding-left: 25px;
+}
+
+.dropdown-content a.activo {
+    background: linear-gradient(135deg, var(--color-primario), var(--color-secundario)) !important;
+    color: var(--color-blanco) !important;
+    padding-left: 25px !important;
+    border-left: 4px solid white;
+}

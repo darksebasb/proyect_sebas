@@ -171,7 +171,7 @@ function cerrarMenu() {
 }
 
 // ============================================
-// GENERAR NAVEGACIÓN - VERSIÓN CORREGIDA
+// GENERAR NAVEGACIÓN - SUBMENÚS AL LADO DERECHO
 // ============================================
 function generarNavegacion() {
     // Crear botón hamburguesa
@@ -190,20 +190,21 @@ function generarNavegacion() {
     
     // Crear nav
     const nav = document.createElement('nav');
-    nav.className = 'tab-container';
+    nav.className = 'tab-container navbar';
     nav.id = 'main-nav';
     
     // Función recursiva para crear elementos del menú
-    function crearElementoMenu(item) {
+    function crearElementoMenu(item, nivel = 0) {
         if (item.dropdown) {
-            // Contenedor del dropdown
-            const dropdown = document.createElement('div');
-            dropdown.className = 'dropdown';
+            // Contenedor subnav
+            const subnav = document.createElement('div');
+            // Primer nivel: dropdown normal, segundo nivel: subnav-lateral
+            subnav.className = nivel === 0 ? 'dropdown subnav' : 'dropdown subnav subnav-lateral';
             
             // Botón principal
             const btn = document.createElement('button');
             btn.id = item.id;
-            btn.className = 'boton-redirect dropdown-btn';
+            btn.className = 'boton-redirect dropdown-btn subnavbtn';
             btn.innerHTML = item.texto;
             btn.onclick = function(e) {
                 e.stopPropagation();
@@ -216,26 +217,19 @@ function generarNavegacion() {
             
             // Contenedor del submenú
             const content = document.createElement('div');
-            content.className = 'dropdown-content';
+            content.className = nivel === 0 
+                ? 'dropdown-content subnav-content' 
+                : 'dropdown-content subnav-content subnav-content-lateral';
             content.id = 'submenu-' + item.id;
-            
-            // Lista de items
-            const ul = document.createElement('ul');
             
             // Procesar cada subitem
             item.subitems.forEach(sub => {
                 if (sub.dropdown) {
-                    // Si el subitem tiene dropdown, crear elemento anidado
-                    const li = document.createElement('li');
-                    li.style.listStyle = 'none';
-                    li.style.position = 'relative';
-                    
-                    // Crear el dropdown anidado
-                    const subDropdown = crearElementoMenu(sub);
-                    li.appendChild(subDropdown);
-                    ul.appendChild(li);
+                    // Submenú anidado
+                    const subDropdown = crearElementoMenu(sub, nivel + 1);
+                    content.appendChild(subDropdown);
                 } else {
-                    // Si es un link normal
+                    // Link normal
                     const a = document.createElement('a');
                     a.href = sub.url;
                     a.textContent = sub.texto;
@@ -246,21 +240,22 @@ function generarNavegacion() {
                         }
                         cerrarTodosDropdowns();
                     };
-                    ul.appendChild(a);
+                    content.appendChild(a);
                 }
             });
             
-            content.appendChild(ul);
-            dropdown.appendChild(btn);
-            dropdown.appendChild(content);
-            return dropdown;
+            subnav.appendChild(btn);
+            subnav.appendChild(content);
+            return subnav;
         } else {
             // Botón normal sin dropdown
-            const btn = document.createElement('button');
+            const btn = document.createElement('a');
             btn.id = item.id;
             btn.className = 'boton-redirect';
             btn.textContent = item.texto;
-            btn.onclick = function() {
+            btn.href = item.url;
+            btn.onclick = function(e) {
+                e.preventDefault();
                 actionRedirect(item.url);
                 if (window.innerWidth <= 768) {
                     cerrarMenu();
@@ -279,7 +274,6 @@ function generarNavegacion() {
     
     document.body.insertBefore(nav, document.body.firstChild);
 }
-
 // ============================================
 // GENERAR FOOTER
 // ============================================
@@ -374,38 +368,6 @@ function toggleAcordeon(id) {
 }
 
 // ============================================
-// INICIALIZAR TODO AL CARGAR
-// ============================================
-document.addEventListener('DOMContentLoaded', function() {
-    generarNavegacion();
-    generarFooterYScript();
-    marcarBotonActivo();
-    
-    // Cerrar dropdowns al hacer click fuera
-    document.addEventListener('click', function(event) {
-        if (!event.target.closest('.dropdown')) {
-            cerrarTodosDropdowns();
-        }
-    });
-    
-    // Cerrar menú con tecla Escape
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-            cerrarMenu();
-        }
-    });
-    
-    window.addEventListener('resize', function() {
-        cerrarTodosDropdowns();
-        if (window.innerWidth > 768) {
-            cerrarMenu();
-        }
-    });
-});
-
-
-
-// ============================================
 // CONSUMO DE API PÚBLICA CON FETCH
 // ============================================
 
@@ -476,9 +438,13 @@ function cargarUsuariosAPI() {
         });
 }
 
-// Evento para el botón de recargar
+// ============================================
+// INICIALIZAR TODO AL CARGAR
+// ============================================
 document.addEventListener('DOMContentLoaded', function() {
-    // ... tu código existente ...
+    generarNavegacion();
+    generarFooterYScript();
+    marcarBotonActivo();
     
     // Agregar evento al botón de recargar API
     const btnRecargar = document.getElementById('btn-recargar');
@@ -492,6 +458,29 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Cargar usuarios al iniciar la página
-    cargarUsuariosAPI();
+    // Cargar usuarios al iniciar la página (solo si existe el contenedor)
+    if (document.getElementById('contenedor-usuarios')) {
+        cargarUsuariosAPI();
+    }
+    
+    // Cerrar dropdowns al hacer click fuera
+    document.addEventListener('click', function(event) {
+        if (!event.target.closest('.dropdown')) {
+            cerrarTodosDropdowns();
+        }
+    });
+    
+    // Cerrar menú con tecla Escape
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            cerrarMenu();
+        }
+    });
+    
+    window.addEventListener('resize', function() {
+        cerrarTodosDropdowns();
+        if (window.innerWidth > 768) {
+            cerrarMenu();
+        }
+    });
 });

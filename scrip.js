@@ -275,13 +275,23 @@ function generarNavegacion() {
     document.body.insertBefore(nav, document.body.firstChild);
 }
 // ============================================
-// GENERAR FOOTER
+// GENERAR FOOTER Y BOTÓN VOLVER ARRIBA
 // ============================================
 function generarFooterYScript() {
+    // Crear botón "Volver arriba"
+    const btnVolverArriba = document.createElement('button');
+    btnVolverArriba.id = 'btn-volver-arriba';
+    btnVolverArriba.className = 'btn-scroll-top';
+    btnVolverArriba.setAttribute('aria-label', 'Volver arriba');
+    btnVolverArriba.innerHTML = '↑';
+    document.body.appendChild(btnVolverArriba);
+    
+    // Crear footer
     const footer = document.createElement('footer');
     footer.innerHTML = '<p>2026 Yosef. Todos los derechos reservados.</p>';
     document.body.appendChild(footer);
 }
+
 
 // ============================================
 // RESALTAR BOTÓN ACTIVO Y SUBITEM ACTIVO
@@ -437,14 +447,14 @@ function cargarUsuariosAPI() {
             btnRecargar.textContent = '🔁 Reintentar';
         });
 }
-
 // ============================================
-// INICIALIZAR TODO AL CARGAR
+// INICIALIZAR TODO AL CARGAR - UN SOLO DOMContentLoaded
 // ============================================
 document.addEventListener('DOMContentLoaded', function() {
     generarNavegacion();
-    generarFooterYScript();
+    generarFooterYScript();  // Ahora también crea el botón volver arriba
     marcarBotonActivo();
+    inicializarBotonVolverArriba();  // Inicializar el botón
     
     // Agregar evento al botón de recargar API
     const btnRecargar = document.getElementById('btn-recargar');
@@ -484,3 +494,30 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+// ============================================
+// BOTÓN VOLVER ARRIBA (SCROLL TO TOP)
+// ============================================
+function inicializarBotonVolverArriba() {
+    const btnVolverArriba = document.getElementById('btn-volver-arriba');
+    
+    if (!btnVolverArriba) return;
+    
+    // Mostrar/ocultar botón según el scroll
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+            btnVolverArriba.classList.add('visible');
+        } else {
+            btnVolverArriba.classList.remove('visible');
+        }
+    });
+    
+    // Al hacer click, volver arriba suavemente
+    btnVolverArriba.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}

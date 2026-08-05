@@ -917,28 +917,25 @@ footer p::before {
    Mismo estilo visual que los links finales */
 .dropdown-content .dropdown .dropdown-btn {
     display: block;
-    width: 100%;
+    width: calc(100% - 20px);
     padding: 12px 20px;
+    margin: 6px 10px;
     color: var(--color-texto);
     font-size: 0.95rem;
     font-weight: 500;
-    border-bottom: 1px solid #e2e8f0;
-    border-radius: 0;
+    border-radius: 50px;
     transition: all 0.3s ease;
     background: var(--color-blanco);
     white-space: nowrap;
     text-align: left;
     border: none;
-    border-bottom: 1px solid #e2e8f0;
     cursor: pointer;
     font-family: inherit;
     position: relative;
+    box-sizing: border-box;
 }
-
-/* Quitar borde inferior al último */
-.dropdown-content .dropdown:last-child .dropdown-btn {
-    border-bottom: none;
-}
+/* Cambios clave: Agregué border-radius: 50px, margin: 6px 10px, width: calc(100% - 20px),
+ box-sizing: border-box y eliminé las dos líneas de border-bottom.*/
 
 /* Hover igual que los links */
 .dropdown-content .dropdown .dropdown-btn:hover {
@@ -990,26 +987,25 @@ footer p::before {
         visibility: visible;
     }
 }
-
 /* ============================================
-   LINKS FINALES (HTML, CSS, JS) - ESTILO ORIGINAL
+   LINKS FINALES (HTML, CSS, JS) - ESTILO REDONDO
    ============================================ */
 
 .dropdown-content a {
     display: block;
     padding: 12px 20px;
+    margin: 6px 10px;
     color: var(--color-texto);
     text-decoration: none;
     font-size: 0.95rem;
     font-weight: 500;
-    border-bottom: 1px solid #e2e8f0;
+    border-radius: 50px;
     transition: all 0.3s ease;
     background: var(--color-blanco);
     white-space: nowrap;
-}
-
-.dropdown-content a:last-child {
-    border-bottom: none;
+    border: none;
+    width: calc(100% - 20px);
+    box-sizing: border-box;
 }
 
 .dropdown-content a:hover {
@@ -1022,9 +1018,9 @@ footer p::before {
     background: linear-gradient(135deg, var(--color-primario), var(--color-secundario)) !important;
     color: var(--color-blanco) !important;
     padding-left: 25px !important;
-    border-left: 4px solid white;
 }
-
+/* Cambios clave: Agregué border-radius: 50px, margin: 6px 10px,
+ border: none, width: calc(100% - 20px) y eliminé border-bottom: 1px solid #e2e8f0.*/
 
 /* ============================================
    BOTÓN VOLVER ARRIBA (SCROLL TO TOP)

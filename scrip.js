@@ -15,9 +15,9 @@ const menuConfig = [
                 url: '#',
                 dropdown: true,
                 subitems: [
-                    { texto: 'HTML', url: 'frontend/index.html' },
-                    { texto: 'CSS', url: 'frontend/css.html' },
-                    { texto: 'JavaScript', url: 'frontend/javascript.html' },
+                    { texto: 'HTML', url: '/frontend/index.html' },
+                    { texto: 'CSS', url: '/frontend/css.html' },
+                    { texto: 'JavaScript', url: '/frontend/javascript.html' },
                 ]
             },
             {
@@ -26,13 +26,13 @@ const menuConfig = [
                 url: '#',
                 dropdown: true,
                 subitems: [
-                    { texto: 'Estructura de datos', url: 'backend/estructuras-datos.html' },
-                    { texto: 'Ciclos', url: 'backend/ciclos.html' },
-                    { texto: 'Condicionales', url: 'backend/condicionales.html' },
-                    { texto: 'TypeScript', url: 'backend/typescript.html' },
-                    { texto: 'Endpoint', url: 'backend/endpoint.html' },
-                    { texto: 'http', url: 'backend/http.html' },
-                    { texto: 'API', url: 'backend/api.html' }
+                    { texto: 'Estructura de datos', url: '/backend/estructuras-datos.html' },
+                    { texto: 'Ciclos', url: '/backend/ciclos.html' },
+                    { texto: 'Condicionales', url: '/backend/condicionales.html' },
+                    { texto: 'TypeScript', url: '/backend/typescript.html' },
+                    { texto: 'Endpoint', url: '/backend/endpoint.html' },
+                    { texto: 'http', url: '/backend/http.html' },
+                    { texto: 'API', url: '/backend/api.html' }
                 ]
             },
             {
@@ -41,21 +41,21 @@ const menuConfig = [
                 url: '#',
                 dropdown: true,
                 subitems: [
-                    { texto: 'Frameworks', url: 'fullstack/frameworks.html' },
-                    { texto: 'Back y Front', url: 'fullstack/backyfront.html' },
-                    { texto: 'Glosario', url: 'fullstack/glosario.html' }
+                    { texto: 'Frameworks', url: '/fullstack/frameworks.html' },
+                    { texto: 'Back y Front', url: '/fullstack/backyfront.html' },
+                    { texto: 'Glosario', url: '/fullstack/glosario.html' }
                 ]
             },
             {
                 id: 'btnloajamiento',
                 texto: "Alojamiento Web",
-                url: 'fullstack/alojamientoWeb.html',
+                url: '/fullstack/alojamientoWeb.html',
                 dropdown: false
             },
             {
                 id: 'btnglosario',
                 texto: "Glosario",
-                url: 'glosario.html',
+                url: '/glosario.html',
                 dropdown: false
             }
         ]
@@ -66,8 +66,8 @@ const menuConfig = [
         url: '#',
         dropdown: true,
         subitems: [
-            { texto: 'Base de datos', url: 'base_de_datos/base_de_datos.html' },
-            { texto: 'ORM', url: 'base_de_datos/orm.html' }
+            { texto: 'Base de datos', url: '/base_de_datos/base_de_datos.html' },
+            { texto: 'ORM', url: '/base_de_datos/orm.html' }
         ]
     },
     { 
@@ -76,9 +76,9 @@ const menuConfig = [
         url: '#',
         dropdown: true,
         subitems: [
-            { texto: 'Git', url: 'repositorios/git.html' },
-            { texto: 'GitHub', url: 'repositorios/github.html' },
-            { texto: 'GitLab', url: 'repositorios/gitlab.html' }
+            { texto: 'Git', url: '/repositorios/git.html' },
+            { texto: 'GitHub', url: '/repositorios/github.html' },
+            { texto: 'GitLab', url: '/repositorios/gitlab.html' }
         ]
     },
 ];

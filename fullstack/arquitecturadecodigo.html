@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <main id="Arquitectura de datos" class="tabcontent">
+        <img src="" 
+        alt="">
+        <h2>¿Qué es la Arquitectura de Código?</h2>
+        <p>
+            La arquitectura de código es el plano que organiza 
+            cómo se conectan todas las partes de tu programa para que no sea un desastre.
+        </p>
+
+        <h3>¿Para qué sirve?</h3>
+
+        <h3>¿Cuándo se usa?</h3>
+
+        <h3>Tipos de Arquitectura de Código</h3>
+
+        <div class="acordeon-item">
+            <p class="page-subtitle">Haz clic en cada una para ver su estructura y características</p>
+
+            <!-- ============================================ -->
+            <!-- 1. MONOLÍTICA -->
+            <!-- ============================================ -->
+            <div class="acordeon-item">
+                <div class="arquitectura-header" onclick="toggleAcordeon(this)">
+                    <span>1️⃣ Monolítica — "Todo en uno"</span>
+                    <span class="flecha">▼</span>
+                </div>
+                <div class="acordeon-item">
+                    <p class="arquitectura-descripcion">
+                        Todo el código está en un solo lugar. Una sola app que hace todo. 
+                        Es como una tiendita de barrio donde el dueño atiende, cobra, limpia y cocina.
+                    </p>
+            </div>
+            <!-- ============================================ -->
+            <!-- 2. MVC -->
+            <!-- ============================================ -->
+            <div class="acordeon-item">
+                <div class="arquitectura-header" onclick="toggleAcordeon(this)">
+                    <span>2️⃣ MVC — Modelo, Vista, Controlador</span>
+                    <span class="flecha">▼</span>
+                </div>
+                <div class="arquitectura-body">
+                    <p class="arquitectura-descripcion">
+                        Separa el código en 3 partes: Modelo (datos), Vista (HTML/CSS) y Controlador (lógica).
+                        Es como un restaurante: la cocina prepara la comida, el mesero la lleva, y el cliente la ve en la mesa.
+                    </p>
+                </div>
+            </div>
+
+            <!-- ============================================ -->
+            <!-- 3. POR CAPAS -->
+            <!-- ============================================ -->
+            <div class="acordeon-item">
+                <div class="arquitectura-header" onclick="toggleAcordeon(this)">
+                    <span>3️⃣ Por Capas (Layered) — "Como una torta"</span>
+                    <span class="flecha">▼</span>
+                </div>
+                <div class="arquitectura-body">
+                    <p class="arquitectura-descripcion">
+                        El código se organiza en niveles. Cada nivel solo habla con el que está arriba o abajo.
+                        Nunca salta niveles. Es como una fábrica de autos: diseño → ingeniería → almacén → transporte.
+                    </p>
+                </div>
+            </div>
+
+            <!-- ============================================ -->
+            <!-- 4. COMPONENTES -->
+            <!-- ============================================ -->
+            <div class="acordeon-item">
+                <div class="arquitectura-header" onclick="toggleAcordeon(this)">
+                    <span>4️⃣ Basada en Componentes — "Piezas de LEGO"</span>
+                    <span class="flecha">▼</span>
+                </div>
+                <div class="arquitectura-body">
+                    <p class="arquitectura-descripcion">
+                        Cada parte de tu app es un bloque independiente que puedes usar una y otra vez.
+                        Es como un kit de muebles IKEA: usas las mismas piezas para armar diferentes cosas.
+                        React, Vue y Angular usan esta arquitectura por defecto.
+                    </p>
+                </div>
+            </div>
+
+            <!-- ============================================ -->
+            <!-- 5. MICROSERVICIOS -->
+            <!-- ============================================ -->
+            <div class="acordeon-item">
+                <div class="arquitectura-header" onclick="toggleAcordeon(this)">
+                    <span>5️⃣ Microservicios — "Varias tiendas independientes"</span>
+                    <span class="flecha">▼</span>
+                </div>
+                <div class="arquitectura-body">
+                    <p class="arquitectura-descripcion">
+                        En lugar de una sola app gigante, divides tu proyecto en varias apps pequeñas e independientes
+                        que se comunican entre sí. Es como un centro comercial: si la zapatería cierra, 
+                        la ferretería y la cafetería siguen funcionando.
+                    </p>
+                </div>
+            </div>
+    </div>
+    </main>
+    <script src="../scrip.js"></script>
+</body>
+</html>

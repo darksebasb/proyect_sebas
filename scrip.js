@@ -15,8 +15,8 @@ const menuConfig = [
                 url: '#',
                 dropdown: true,
                 subitems: [
-                    { texto: 'HTML', url: '/frontend/index.html' },
-                    { texto: 'CSS', url: '/frontend/css.html' },
+                    { texto: 'Html', url: '/index.html' },
+                    { texto: 'Css', url: '/frontend/css.html' },
                     { texto: 'JavaScript', url: '/frontend/javascript.html' },
                 ]
             },
@@ -26,13 +26,14 @@ const menuConfig = [
                 url: '#',
                 dropdown: true,
                 subitems: [
-                    { texto: 'Estructura de datos', url: '/backend/estructuras-datos.html' },
+                    { texto: 'Api', url: '/backend/api.html' },
+                    { texto: 'Alojamiento Web', url: '/backend/alojamientoweb.html' },
                     { texto: 'Ciclos', url: '/backend/ciclos.html' },
                     { texto: 'Condicionales', url: '/backend/condicionales.html' },
-                    { texto: 'TypeScript', url: '/backend/typescript.html' },
+                    { texto: 'Estructura de datos', url: '/backend/estructuras-datos.html' },
                     { texto: 'Endpoint', url: '/backend/endpoint.html' },
-                    { texto: 'http', url: '/backend/http.html' },
-                    { texto: 'API', url: '/backend/api.html' }
+                    { texto: 'Http', url: '/backend/http.html' },
+                    { texto: 'TypeScript', url: '/backend/typescript.html' },
                 ]
             },
             {
@@ -43,20 +44,10 @@ const menuConfig = [
                 subitems: [
                     { texto: 'Frameworks', url: '/fullstack/frameworks.html' },
                     { texto: 'Back y Front', url: '/fullstack/backyfront.html' },
-                    { texto: 'Glosario', url: '/fullstack/glosario.html' }
+                    { texto: 'Glosario', url: '/fullstack/glosario.html' },
+                    { texto: 'componente', url: '/fullstack/componente.html' },
+                    { texto: 'Arquitectura de código', url: '/fullstack/arquitecturadecodigo.html' },
                 ]
-            },
-            {
-                id: 'btnloajamiento',
-                texto: "Alojamiento Web",
-                url: '/fullstack/alojamientoWeb.html',
-                dropdown: false
-            },
-            {
-                id: 'btnglosario',
-                texto: "Glosario",
-                url: '/glosario.html',
-                dropdown: false
             }
         ]
     },
@@ -295,7 +286,7 @@ function generarFooterYScript() {
     
     // Crear footer
     const footer = document.createElement('footer');
-    footer.innerHTML = '<p>2026 Yosef. Todos los derechos reservados.</p>';
+    footer.innerHTML = '<p>2026 Sebastian Beltran. Derechos reservados.</p>';
     document.body.appendChild(footer);
 }
 

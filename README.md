@@ -54,9 +54,21 @@ nota: usar fech no axios
 
 
 
-TAREAS:
+TAREAS: (TODO LO DE INVESTIGACIÓN DEBE DE LLEVAR "QUE ES, PARA QUE SIRVE, CUANDO SE USA "Y ENTENDER LOS CONCEPTOS)
 1. MODIFICAR CUANDO LA SELECCIÓN DE PESTAÑAS O CUANDO ESTE EN EL HOVER O ELEMENTO DE HIJO
-2. ARREGLAR DISEÑO DEL NAV, UN SOLO ESTILO - check 
+2. ARREGLAR DISEÑO DEL NAV, UN SOLO ESTILO - check
 3. QUE ES UN COMPONENTE
-4 ORGANIZAR LOS ARCHIVOS EN CARPETAS (MÁS ORGANIZADO) - check 
+4 ORGANIZAR LOS ARCHIVOS EN CARPETAS (MÁS ORGANIZADO) - check
 5.ESTUDIAR REACT Y MIRAR LOS CONCEPTOS, ENTENDERLO, APRENDERLO Y AGREGARLO EN LA PAGINA
+6. busque es es arquitectura de codigo y cuales tipos hay
+
+
+
+1. Opción que resalte donde estoy en mi pagina con un color referente a la paleta de colores
+2. que es un barrer
+3. ver video de react desde cero a experto / 13h y despues terminar curso de Udemy
+4. Terminar arquitectura de codigo y arquitectura de carpetas
+
+
+nota: cuando se utilicen imagenes, utilizar iconos o imagenes libres de derechos de autor . Pero si es necesario las imagenes debe ir citadas formato normas APA
+

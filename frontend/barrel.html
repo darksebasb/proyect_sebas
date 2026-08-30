@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <main id="Barrel" class="tabcontent">
+        <h2>¿Que es un Barrel?</h2>
+        <img src="../img/banner.png" alt="Banner">
+        <p>
+            Es un patrón de organización de código muy común en proyectos JavaScript/TypeScript.
+            No tiene nada que ver con diseño visual, sino con la estructura y organización de módulos en tu código.
+        </p>
+
+        <h3>¿Para que sirve?</h3>
+        <p>
+            Un banner cumple múltiples funciones dentro de una estrategia digital:
+        </p>
+        <ul>
+            <li><strong>Importaciones más limpias:</strong> Reduce múltiples líneas de importación a una sola.</li>
+            <li><strong>Encapsulación</strong> Oculta la estructura interna de la carpeta. Puedes mover o renombrar archivos sin afectar a quienes los importan. </li>
+            <li><strong>API pública clara:</strong> Define explícitamente qué es "público" y qué es interno de un módulo.</li>
+            <li><strong>Facilita el refactoring:</strong> Si cambias la ubicación de un archivo, solo actualizas el barrel, no todos los consumidores. </li>
+            <li><strong>Nombres consistentes:</strong> Fomenta el uso de named exports, evitando que el mismo componente tenga nombres diferentes en distintos archivos. </li>
+        </ul>
+
+        <h3>¿Cuándo se usa?</h3> 
+        <p>✅ Úsalo cuando:</p>
+        <ul>
+            En tu propia web (banners internos)
+            <li><strong>Librerías publicadas:</strong> Necesitas un único punto de entrada (main en package.json) para que los usuarios importen tu librería</li>
+            <li><strong>Bibliotecas de componentes:</strong> Agrupas muchos componentes UI (como un design system) y quieres que se importen fácilmente.</li>
+            <li><strong>Bibliotecas de iconos:</strong> Perfecto para agrupar decenas de iconos individuales. </li>
+            <li><strong>Agrupar funcionalidad relacionada:</strong> Actions de Redux, clientes de API, utilidades, etc.</li>
+
+            Evítalo cuando:
+Aplicaciones grandes con builds lentos: Los barrel files pueden ralentizar significativamente el bundler y el dev server. 
+Cuando importas solo una cosa de una carpeta grande: El bundler puede terminar analizando todo el módulo innecesariamente.
+Riesgo de dependencias circulares: Si un archivo importa del barrel y el barrel re-exporta ese mismo archivo, creas un ciclo. 
+Tree-shaking débil: Bundlers antiguos (Webpack 4, configuraciones básicas de Rollup) pueden incluir código muerto al no poder eliminar exports no usados.
+        </ul>
+    </main>
+    <script src="../scrip.js"></script>
+</body>
+</html>

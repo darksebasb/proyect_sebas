@@ -63,12 +63,13 @@ TAREAS: (TODO LO DE INVESTIGACIÓN DEBE DE LLEVAR "QUE ES, PARA QUE SIRVE, CUAND
 6. busque es es arquitectura de codigo y cuales tipos hay
 
 
-
+Tareas para el 15 de agosto
 1. Opción que resalte donde estoy en mi pagina con un color referente a la paleta de colores
 2. que es un barrer
 3. ver video de react desde cero a experto / 13h y despues terminar curso de Udemy
 4. Terminar arquitectura de codigo y arquitectura de carpetas
-
+5. Iniciar el proyecto mi pagina de portafolio o cv en react (proceso de arquitectura-como la quiero y demas, crear la base del proyecto sin IA, la pagina principal va decir solo "Hola Sebas")- nota: si la embarra, elimina y vuelve a crear no problem
+6. Arreglar la pagina del glosario con responsive 
 
 nota: cuando se utilicen imagenes, utilizar iconos o imagenes libres de derechos de autor . Pero si es necesario las imagenes debe ir citadas formato normas APA
 

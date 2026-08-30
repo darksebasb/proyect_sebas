@@ -18,6 +18,7 @@ const menuConfig = [
                     { texto: 'Html', url: '/index.html' },
                     { texto: 'Css', url: '/frontend/css.html' },
                     { texto: 'JavaScript', url: '/frontend/javascript.html' },
+                    { texto: 'Barrel', url: '/frontend/barrel.html' },
                 ]
             },
             {
